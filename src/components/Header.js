@@ -2,7 +2,7 @@ import React from 'react'
 import Link from 'gatsby-link'
 
 // images
-import logo from '../images/team-x-logo.png';
+import logo from "../images/logo.png";
 
 
 class Header extends React.Component {
