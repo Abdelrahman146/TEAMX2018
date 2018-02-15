@@ -1,6 +1,6 @@
 module.exports = {
   siteMetadata: {
-    title: 'TEAMX IT Solutions Website',
+    title: 'TEAMX IT Solutions',
     description: 'This is teamx website developed by gatsby',
     siteUrl: 'http://www.teamx.ae',
     author: 'Abdel Rahman Harahsheh',

@@ -16,17 +16,19 @@ import member2 from '../images/team/member2.jpg'
 class Index extends React.Component {
     render() {
         const { data } = this.props
+        const metadata = data.site.siteMetadata
+        const page = data.markdownRemark
         return (
             <div>
             <Helmet>
                 <meta charSet="utf-8" />
-                <title>My Title</title>
+                <title>{metadata.title} | {page.frontmatter.title}</title>
             </Helmet>
             <div className="container-fluid">
             <TitleBox
-            pageTitle="TEAMX IT Solutions"
-            pageSubtitle="Your Technology is Always 10X Ahead"
-            pageDescription="We Deliver The Latest and Best  IT Innovations To Make Dubai Technology Always 10X Ahead"
+            pageTitle={page.frontmatter.page_title}
+            pageSubtitle={page.frontmatter.subtitle}
+            pageDescription={page.frontmatter.description}
              />
             </div>
             </div>
@@ -38,6 +40,11 @@ export default Index
 
 export const pageQuery = graphql`
     query IndexQuery {
+        site{
+            siteMetadata{
+            title
+            }
+        }
         markdownRemark(frontmatter:{slug: {eq:"home"}}){
             frontmatter {
             title
