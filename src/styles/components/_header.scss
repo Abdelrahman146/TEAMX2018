@@ -1,0 +1,29 @@
+
+.header {
+    nav {
+        background-color: none;
+        .navbar-brand {
+            img {
+                height: 90px;
+                padding: 0;
+                margin: 0;
+            }
+        }
+        .navbar-text {
+            color: $white;
+            font-weight: 600;
+            font-size: 1.1rem;
+        }
+
+        @include media-breakpoint-down(sm) {
+            .navbar-brand {
+                img {
+                    height: 60px;
+                }
+            }
+            .navbar-text {
+                font-size: 0.8rem;
+            }
+        }
+    }
+}

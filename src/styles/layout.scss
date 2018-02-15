@@ -1,0 +1,15 @@
+.content {
+    z-index: 4;
+    position: relative;
+    min-height: 100vh;
+    width: 100%;
+    padding: 1.3rem 1.3rem;
+
+  }
+
+  @include media-breakpoint-down(sm) {
+    .content {
+        padding: 0.2rem 0.2rem;
+        
+    }
+  }

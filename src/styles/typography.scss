@@ -1,0 +1,32 @@
+
+html {
+    font-size: $font-size-base;
+    font-weight: $font-weight-normal;
+    p {
+      font-size: $font-size-base;
+    font-weight: $font-weight-normal;
+    }
+    h1,h2,h3,h4,h5,h6 {
+      font-weight: $headings-font-weight;
+      line-height: $headings-line-height;
+    }
+  }
+  
+  @include media-breakpoint-up(sm) {
+    html {
+      font-size: $font-size-xs;
+  
+    }
+  }
+  
+  @include media-breakpoint-up(md) {
+    html {
+      font-size: $font-size-xs;
+    }
+  }
+  
+  @include media-breakpoint-up(lg) {
+    html {
+      font-size: $font-size-lg;
+    }
+  }

@@ -1,0 +1,27 @@
+
+
+.footer {
+    margin-top: 2rem;
+    text-align: center;
+    .socialMedia {
+        list-style-type: none;
+        margin: 0px;
+        padding: 0px;;
+        li {
+            display: inline;
+            margin: 0 5px;
+            img {
+                margin-bottom: 0;
+                padding-bottom: 0;
+            }
+        }
+    }
+    .copyright {
+        color: $white;
+        letter-spacing: 0.1;
+        font-size: 1rem;
+        line-height: 2;
+        margin-bottom: 0;
+        margin-top: 10px;
+    }
+}
