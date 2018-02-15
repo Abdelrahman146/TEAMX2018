@@ -85,7 +85,6 @@ module.exports = {
     'gatsby-plugin-sass',
     'gatsby-plugin-sharp',
     'gatsby-plugin-sitemap',
-    'gatsby-plugin-twitter',
     'gatsby-transformer-sharp',
   ],
 }
