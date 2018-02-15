@@ -2,6 +2,7 @@
 slug: about
 title: "About us"
 type: page
+cover: "./path/to/cover"
 page_title: "About us"
 subtitle: TeamX in Sentences!!
 description: "TeamX IT solutions proudly announces its success stories in the field of IT in the UAE, With our consistency and hard work in this domain, we have developed a good reputation. Our work speaks louder on our behalf. Thanks for choosing TEAMX."
