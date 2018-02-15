@@ -3,8 +3,8 @@ title: "Home"
 slug: "home"
 type: page
 page_title: "TEAMX IT Solutions"
-subtitle: "Your Technology is ALways 10X Ahead"
-description: "We Deliver The Latest and Best  IT Innovations To Make Dubai Technology Always 10X Ahead"
+subtitle: "We are the TeamX we provide  the most advance  and promising IT Solutions in UAE"
+description: "Creativity guarantees success. TeamX unites you with professionals of IT solutions in UAE. They step into your boots and collide your business with creativity to take you to the heights of success in UAE"
 footer: "This Website is Designed and Developed By TEAMX - 2018"
 social_media: 
     facebook: "facebook.com"
@@ -13,4 +13,3 @@ social_media:
     youtube: "youtube.com"
     googleplus: "google.com"
 ---
-We Deliver The Latest And Best IT Innovations To Make Dubai Technology Always 10X Ahead

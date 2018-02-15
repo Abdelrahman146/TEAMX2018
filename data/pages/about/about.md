@@ -2,8 +2,8 @@
 slug: about
 title: "About us"
 type: page
-page_title: "TeamX in Sentences!!"
-subtitle: loolol
+page_title: "About us"
+subtitle: TeamX in Sentences!!
 description: "TeamX IT solutions proudly announces its success stories in the field of IT in the UAE, With our consistency and hard work in this domain, we have developed a good reputation. Our work speaks louder on our behalf. Thanks for choosing TEAMX."
 vision: "“Building Technology with simplicity”"
 mission: "“To Simplify all digital solutions that we produce and make it easy to all”"
