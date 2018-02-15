@@ -1,8 +1,6 @@
 import React from 'react'
 import Link from 'gatsby-link'
 
-// images
-import logo from '../images/team-x-logo.png';
 
 
 class TitleBox extends React.Component {
