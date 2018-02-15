@@ -1,5 +1,5 @@
 ---
-path: "/services/e-business-card"
+path: "/services/web_solutions"
 type: service
 title: "Web solutions"
 subtitle: "Connect with people fast with ease!"
