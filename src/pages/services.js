@@ -68,7 +68,7 @@ class About extends React.Component {
 export default About
 
 export const pageQuery = graphql`
-    query PageQuery {
+    query ServicesQuery {
         service: markdownRemark(frontmatter:{slug: {eq:"services"}}){
             frontmatter {
             title
