@@ -1,14 +1,15 @@
 
 
 .title-box {
+    margin: 0 auto;
     margin-bottom: 50px;
+    max-width: 1300px;
     color: $white;
     text-align: center;
     vertical-align: center;
     margin-top: 130px;
     .inner-box {
-        max-width: 1200px;
-        margin: 0 auto;
+        
         margin-bottom: 50px;
         .title {
             font-weight: 600;

@@ -24,7 +24,6 @@ class TitleBox extends React.Component {
                               <li><Link to="/about">About us</Link></li>
                               <li><Link to="/services">Services</Link></li>
                               <li><Link to="/contact">Contact us</Link></li>
-                              <li><Link to="/consultation">Consultation</Link></li>
                               <li><Link to="/blog">Blog</Link></li>
                           </ul>
                       </nav>

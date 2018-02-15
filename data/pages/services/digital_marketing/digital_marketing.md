@@ -8,9 +8,9 @@ description: "Digital marketing is the most important strategy to make your busi
 image: "./icon.png"
 video: "./path/to/video"
 solutions: 
-    -   title: "Web Applications"
+    -   title: "Search Engine Optimzation (SEO)"
         image: "./service/image.png"
-        description: "TeamX IT Solution creates best responsive websites in UAE, These Websites not only create customer satisfaction but also provides a competitive edge. We have many examples such as Customer friendly e-shopping portals and other platform are widely appreciated and we proudly claim our master work in this regard."
+        description: "You might have heard a lot about SEO and how it works, but basically it is the process that effect the visibility of a website or webpage in a web search engine that your pages are worth showing in most important search engines such as Google."
 ---
 # We understand your needs:
 TeamX It solutions is a well-known IT agency that understands the importance of additional benefits of digital marketing. We provide you the best IT services and helps in developing the loyal for your business. Your success is our passion.
