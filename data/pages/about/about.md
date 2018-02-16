@@ -17,12 +17,12 @@ mission_ar: " تبسيط جميع الحلول الرقمية المقدمة و�
 sections:
   - title_en: "Who We Are ?"
     title_ar: "من نحن؟"
-    image: "path/to/image"
+    image: "./teamx.png"
     description_en: "We are the “TeamX”!! we provide  the most advance  and promising Web Development, IT Security, SEO (Search Engine Optimization), Social Media Marketing, Hosting and Domain Registration solutions and more to  fulfil your virtual needs in this age of technology in UAE and to any one in the world. Our aim is to become the one of Leaders in IT Industry and to provide the best IT solutions in the UAE market. We are the IT professionals, we are most Experience IT Team. We are here to create the best IT Solutions. We are technology experts. We are TeamX"
     description_ar: "فريق تيم إكس يقدم الحلول التقنية في دولة الإمارات العربية المتحدة. نحن نفتخر في خدمتكم و تقديكم الأفضل في مجال التقنية. فريق تيم إكس متخصص في تطوير وبرمجة المواقع الإلكترونية، تطوير وبرمجة تطبيقات الهواتف الذكية، حلول أمن المعلومات و حلول الاستضافة وتسجيل نطاقات مواقع الإنترنت وغيرها من الخدمات التي ستضمن تقدم اعمالكم و نجاحها، للمزيد تواصلوا معنا الان!!"
   - title_en: "TEAMX?"
     title_ar: "تيم إكس؟"
-    image: "path/to/image"
+    image: "./our-team.png"
     description_en: "Welcome to TeamX IT solutions. We call ourselves “TeamX”.We believe in building people and businesses, we select high caliber teams from all over the globe to make sure your requirements be competent in your industry and to be sustained, we are the team will support your ideas and make it real. Our team’s hard work, consistency, and relations with our clients have led us to this much level. Yet we are ready for exciting challenges coming our way towards success, Our values are simply more than just words, welcome to TEAMX again!!"
     description_ar: "أهلا بكم مع فريق تيم إكس لحلول تكنولوجيا المعلومات. نحن نطلق على انفسنا اسم تيم إكس.فريقنا يؤمن ببناء الإنسان و تتطويرالأعمال. يتكون فريقنا من خبراء من جميع أنحاء العالم ليضعوا خبرتهم الطويلة في تنفيذ الأعمال بمهارة و حرفية عالية. نحن نعمل بجد لكي نحقق أحلامكم التقنية وجعلها في الواقع أمامكم.نحن مستعدين لتجاوز جميع التحديات و نعمل بروح الفريق الواحد لتجاوزها.قيمنا ببساطه اكبر من ان تكتب في سطور، مرحبا بكم مجددا !!"
 features:
@@ -33,7 +33,7 @@ features:
       description_ar: "الإبتكار و الأفكار النيرة ستضمن لكم النجاح . فريق تيم إكس فريق  مبتكر و متميز حيث يوفر لكم الحلول المبتكرة التي ستضمن لكم استمرار نجاحاتكم في عالم التقنية المتجدد في سوق دولة الإمارات العربية المتحدة."
     - title_en: "WIN, we WIN !!"
       title_ar: "نجاحكم هو نجاحنا"
-      icon: "./features/original.png"
+      icon: "./features/success.png"
       description_en: "TeamX doesn't make customers only, we make partners and lifelong partnerships. Our WIN is associated with your WIN. We work as a team and devise ideas and strategies that take your business to the next level, are you ready?"
       description_ar: "فريق تيم إكس ليس هدفه مادي فقط ولكن هدفنا إنجاح عملائنا، فبنجاح عملائنا تتحقق سلسلة نجاحات فريق تيم إكس. فريقنا يعمل كفريق واحد وينشئ إستراتيجيات لتحقيق النجاح المنشود من قبل عملائنا ونهتم جدا في نقل مستوى النتائج الى مستوى اعلى من التميز و التقدم المدروس بعناية جيدة."
 ---
