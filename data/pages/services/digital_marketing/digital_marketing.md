@@ -1,6 +1,6 @@
 ---
 type: service
-cover: "path/to/cover/image"
+cover: "./cover.jpg"
 title_en: "Digital Marketing"
 title_ar: "التسويق الرقمي"
 page_title_en: "Digital Marketing"

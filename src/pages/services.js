@@ -4,7 +4,11 @@ import get from 'lodash/get'
 import sortBy from 'lodash/sortBy'
 import Helmet from 'react-helmet'
 import LazyLoad from 'react-lazyload'
+import styled from "styled-components";
 
+//components
+import Header from '../components/Header'
+import Footer from '../components/Footer'
 import TitleBox from '../components/TitleBox'
 
 import web from '../images/services/web.png'
@@ -16,11 +20,15 @@ class About extends React.Component {
     render() {
         const { data } = this.props
         const page = data.service
+        const bg = page.frontmatter.cover == null ? "" : page.frontmatter.cover.childImageSharp.resize.src
+        const Cover = styled.div`
+                background-image: url(${bg});
+        `;
         const services = data.services.edges
         const serviceslist = [];
         services.forEach(service => {
             service = service.node
-            const image = service.frontmatter.image.childImageSharp.resize.src
+            const image = "service.frontmatter.image.childImageSharp.resize.src"
             serviceslist.push(
               <div className="card member-card">
               <img class="card-img-top vector" src={image} alt="Card image cap"/>
@@ -41,6 +49,8 @@ class About extends React.Component {
         )
         return (
             <div>
+            <div className="content">
+            <Header/>
             <div className="container-fluid">
             <TitleBox
             pageTitle={page.frontmatter.page_title}
@@ -60,6 +70,10 @@ class About extends React.Component {
                 </div>
             </div>
           </div>
+          
+          <Footer />
+        </div>
+        <Cover id="bg"></Cover>
             </div>
         )
     }
@@ -71,10 +85,17 @@ export const pageQuery = graphql`
     query ServicesQuery {
         service: markdownRemark(frontmatter:{slug: {eq:"services"}}){
             frontmatter {
-            title
-            page_title
-            subtitle
-            description
+            title_en
+            page_title_en
+            subtitle_en
+            description_en
+            cover {
+                childImageSharp {
+                    resize (width: 1920){
+                        src
+                    }
+                }
+            }
             }
             html
         }
@@ -82,15 +103,15 @@ export const pageQuery = graphql`
             edges {
             node{
                 frontmatter{
-                title
-                description
-                image {
-                    childImageSharp {
-                        resize (width: 200){
-                            src
-                        }
-                    }
-                }
+                title_en
+                description_en
+                # image {
+                #     childImageSharp {
+                #         resize (width: 200){
+                #             src
+                #         }
+                #     }
+                # }
                 }
             }
             }

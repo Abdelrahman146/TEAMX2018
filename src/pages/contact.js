@@ -4,7 +4,11 @@ import get from 'lodash/get'
 import sortBy from 'lodash/sortBy'
 import Helmet from 'react-helmet'
 import LazyLoad from 'react-lazyload'
+import styled from "styled-components";
 
+//components
+import Header from '../components/Header'
+import Footer from '../components/Footer'
 import TitleBox from '../components/TitleBox'
 
 import teamx from '../images/teamx.png'
@@ -15,9 +19,11 @@ import marketing from '../images/services/marketing.png'
 
 class Contact extends React.Component {
     render() {
-
+        
         return (
             <div>
+            <div className="content">
+            <Header/>
             <div className="container-fluid">
             <TitleBox
             pageTitle="Contact us"
@@ -83,6 +89,9 @@ class Contact extends React.Component {
                 </div>
             </div>
           </div>
+          <Footer />
+        </div>
+        <div id="bg"></div>
             </div>
         )
     }

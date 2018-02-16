@@ -1,6 +1,6 @@
 ---
 type: service
-cover: "path/to/cover/image"
+cover: "./cover.jpg"
 title_en: "Web Solutions"
 title_ar: "خدمات الويب"
 page_title_en: "Virtual World"

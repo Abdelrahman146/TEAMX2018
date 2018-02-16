@@ -3,7 +3,7 @@ title_en: "Services"
 title_ar: "خدماتنا"
 slug: "services"
 type: page
-cover: "./path/to/cover"
+cover: "./cover.jpg"
 page_title_en: "Our Services"
 page_title_ar: "خدماتنا"
 subtitle_en: ""

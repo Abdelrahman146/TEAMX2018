@@ -1,7 +1,7 @@
 ---
 slug: contact
 type: page
-cover: ""
+cover: "./cover.jpg"
 title_en: "Contact us"
 titel_ar: "تواصل معنا"
 page_title_en: "Contact us"

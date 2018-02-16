@@ -3,7 +3,7 @@ slug: about
 title_en: "About us"
 title_ar: "من نحن"
 type: page
-cover: "./path/to/cover"
+cover: "./cover.jpg"
 page_title_ar: "مـــن نـــحـــن"
 page_title_en: "About us"
 subtitle_ar: "تيم إكس في سطور"

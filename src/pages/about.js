@@ -4,7 +4,11 @@ import get from 'lodash/get'
 import sortBy from 'lodash/sortBy'
 import Helmet from 'react-helmet'
 import LazyLoad from 'react-lazyload'
+import styled from "styled-components";
 
+//components
+import Header from '../components/Header'
+import Footer from '../components/Footer'
 import TitleBox from '../components/TitleBox'
 
 import teamx from '../images/teamx.png'
@@ -18,13 +22,23 @@ import tech from '../images/features/tech.png'
 
 class About extends React.Component {
     render() {
-
+        const { data } = this.props
+        const metadata = data.site.siteMetadata
+        const page = data.markdownRemark
+        const bg = page.frontmatter.cover == null ? "" : page.frontmatter.cover.childImageSharp.resize.src
+        const Cover = styled.div`
+                background-image: url(${bg});
+        `;
         return (
             <div>
+            <div className="content">
+            <Header/>
             <div className="container-fluid">
-            <TitleBox 
-            pageTitle= "About us"
-            />
+            <TitleBox
+            pageTitle={page.frontmatter.page_title_en}
+            pageSubtitle={page.frontmatter.subtitle_en}
+            pageDescription={page.frontmatter.description_en}
+             />
             <div className="row">
                 <div className="col-sm">
                     <div className="page">
@@ -130,9 +144,37 @@ class About extends React.Component {
                 </div>
             </div>
           </div>
+          <Footer />
+        </div>
+        <Cover id="bg"></Cover>
             </div>
         )
     }
 }
 
 export default About
+
+export const aboutQuery = graphql`
+    query AboutQuery {
+        site{
+            siteMetadata{
+            title
+            }
+        }
+        markdownRemark(frontmatter:{slug: {eq:"about"}}){
+            frontmatter {
+            title_en
+            page_title_en
+            subtitle_en
+            description_en
+            cover {
+                childImageSharp {
+                    resize (width: 1920){
+                        src
+                    }
+                }
+            }
+        }
+        }
+    }
+`

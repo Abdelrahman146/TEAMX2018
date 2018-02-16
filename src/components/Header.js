@@ -14,11 +14,11 @@ class Header extends React.Component {
         const data = this.props
         return(
             <div className="header">
-            <nav class="navbar navbar-light">
-                <Link class="navbar-brand" to="/">
+            <nav className="navbar navbar-light">
+                <Link className="navbar-brand" to="/">
                     <img src={logo} alt="teamx logo"/>
                 </Link>
-                <span class="navbar-text">
+                <span className="navbar-text">
                     Whatsapp: +971-123453432
                 </span>
             </nav>

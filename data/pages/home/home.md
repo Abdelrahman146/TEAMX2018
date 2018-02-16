@@ -1,7 +1,7 @@
 ---
 slug: "home"
 type: page
-cover: "./path/to/cover"
+cover: "./cover.jpg"
 title_en: "Home"
 title_ar: "الصفحة الرئيسية"
 page_title_en: "TEAMX IT Solutions"
