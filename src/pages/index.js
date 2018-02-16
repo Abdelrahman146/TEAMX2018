@@ -27,7 +27,9 @@ class Index extends React.Component {
         return (
             <div>
             <div className="content">
-            <Header/>
+            <Header
+            language="العربية"
+            />
             <Helmet>
                 <meta charSet="utf-8" />
                 <title>{metadata.title} | {page.frontmatter.title_en}</title>

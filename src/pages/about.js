@@ -32,7 +32,9 @@ class About extends React.Component {
         return (
             <div>
             <div className="content">
-            <Header/>
+            <Header
+            language="العربية"
+            />
             <div className="container-fluid">
             <TitleBox
             pageTitle={page.frontmatter.page_title_en}

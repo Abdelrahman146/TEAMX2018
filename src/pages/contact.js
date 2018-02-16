@@ -23,7 +23,9 @@ class Contact extends React.Component {
         return (
             <div>
             <div className="content">
-            <Header/>
+            <Header
+            language="العربية"
+            />
             <div className="container-fluid">
             <TitleBox
             pageTitle="Contact us"

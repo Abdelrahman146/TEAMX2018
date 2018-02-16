@@ -19,7 +19,9 @@ class Header extends React.Component {
                     <img src={logo} alt="teamx logo"/>
                 </Link>
                 <span className="navbar-text">
-                    Whatsapp: +971-123453432
+                    <Link className="text-light" to={data.language == "العربية" ? "/ar/" : "/en/"}>
+                    {data.language}
+                    </Link>
                 </span>
             </nav>
         </div>
