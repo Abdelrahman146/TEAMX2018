@@ -23,21 +23,26 @@ class Section extends React.Component {
         }
         return(
             <section>
-                <h1 className="headline">{data.title}</h1>
+                
                 <div className="row">
-                    <div className="col-sm-5">
-                        <img src={data.image} alt={data.image_alt}/>
+                    <div className={data.order%2 == 0 ? 'col-sm-5 align-middle' : 'col-sm-5 align-middle order-sm-2'}>
+                        <div className="section-image">
+                            <img src={data.image} alt={data.image_alt}/>
+                        </div>
                     </div>
-                    <div className="align-middle col-sm-7">
-                        <div className=" card">
-                            <div className="card-body align-middle">
+                    <div className={data.order%2 == 0 ? 'col-sm-7 align-middle' : 'col-sm-7 align-middle order-sm-1'}>
+                        <div className="card section-content">
+                            <div className="card-body">
+                                <div className="card-header">
+                                    <h2 className="text-center">{data.title}</h2>
+                                </div>
                                 <div className="card-text">
                                 <p className="">
                                     {data.description}
                                 </p>
                                 </div>
+                                {button}
                             </div>
-                            {button}
                         </div>
                     </div>
                 </div>

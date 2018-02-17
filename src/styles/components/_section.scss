@@ -1,56 +1,55 @@
 section {
-    padding-top: 40px;
-    .headline {
-        padding: 10px;
-        color: $purple-dark;
-        position: relative;
+    //padding-top: 40px;
+    
+    .section-image {
         text-align: center;
-        &:after{
-            content:' ';
-            position: absolute;
-            display:block;
-            width: 50px;
-            border:3px solid $purple-dark;
-            border-radius:4px;
-            background-color: $purple-dark;
-            left: 50%;
-            transform: translateX(-50%);
-            top: 0;
+        img {
+            margin: 0 auto;
         }
     }
-    .sub-section {
-        margin: 15px 0;
-    }
-    .card-group, .card-deck {
-        flex-wrap: wrap;
-        justify-content: center;
-        .card {
-            flex-grow: 0;
-            flex-basis: 30%;
-            border-radius: 0;
-            border: none;
-            outline: 1px solid $gray-300;
-            background-color: $white;
-            //padding: 15px;
-            // //max-width: 1700px;
-            //box-shadow: 2px 2px 7px $purple-dark;
-            //border: 1px solid $purple-dark;
-            .icon {
-                height: 150px;
-                width: 150px;
-                margin: 0 auto;
-                margin-top: 20px;
+
+    .section-content {
+        height: 100%;
+        background-color: transparent;
+        border: none;
+        .card-body{
+            padding: 0;
+            .card-header {
+                background-color: transparent;
+                border: none;
+                padding: 15px 0;
             }
-            .vector {
-                max-height: 150px;
-                max-width: 250px;
-                margin: 0 auto;
-                margin-top: 20px;
+            .card-footer {
+                background-color: transparent;
+                border-color: $purple;
+                padding: 15px 0;
             }
-        }
-        .member-card {
-            flex-basis: 20%;
         }
     }
     
+}
+
+@include media-breakpoint-down(sm) {
+    section {
+        .headline {
+            &:after{
+            
+            }
+        }
+        
+        .section-image {
+        }
+    
+        .section-content {
+            .card-body{
+                .card-header {
+
+                }
+                .card-footer {
+                    text-align: center;
+                }
+            }
+        }
+        
+    }
 }

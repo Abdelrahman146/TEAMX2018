@@ -8,8 +8,11 @@ import Header from '../components/Header'
 import Footer from '../components/Footer'
 import TitleBox from '../components/TitleBox'
 import Section from '../components/Section'
+import Headline from '../components/Headline'
+import Card from '../components/Card'
 
-import teamx from '../images/teamx.png'
+import mission from '../images/mission.png'
+import vision from '../images/vision.png'
 import abdel from '../images/team/abdel.jpg'
 import member1 from '../images/team/member1.jpg'
 import member2 from '../images/team/member2.jpg'
@@ -30,6 +33,7 @@ class About extends React.Component {
 
         //fetch sections
         const sectionslist = [];
+        let i = 0;
         page.frontmatter.sections.forEach(section => {
             const image = section.image.childImageSharp.resize.src
             sectionslist.push(
@@ -37,6 +41,24 @@ class About extends React.Component {
               title={section.title_en}
               image={image}
               description={section.description_en}
+              btn_text="Ask"
+              order= {i++}
+              />
+            )
+          }
+        )
+
+        //fetch features
+        const featureslist = [];
+        page.frontmatter.features.forEach(feature => {
+            const image = feature.image.childImageSharp.resize.src
+            featureslist.push(
+              <Card 
+              color= ""
+              image= {image}
+              image_type= "icon"
+              header= {<h4>{feature.title_en}</h4>}
+              text= {<p>{feature.description_en}</p>}
               />
             )
           }
@@ -44,51 +66,54 @@ class About extends React.Component {
 
         return (
             <div>
+            <Helmet>
+                <meta charSet="utf-8" />
+                <title>{metadata.title} | {page.frontmatter.title_en}</title>
+            </Helmet>
             <div className="content">
             <Header
             language="العربية"
             />
             <div className="container-fluid">
-            <TitleBox
-            pageTitle={page.frontmatter.page_title_en}
-            pageSubtitle={page.frontmatter.subtitle_en}
-            pageDescription={page.frontmatter.description_en}
-             />
-            <div className="row">
-                <div className="col-sm">
-                    <div className="page">
+                <TitleBox
+                pageTitle={page.frontmatter.page_title_en}
+                pageSubtitle={page.frontmatter.subtitle_en}
+                pageDescription={page.frontmatter.description_en}
+                />
+                <div className="page">
+
+                    <div class="page-content">
+                        <Headline title={page.frontmatter.sections_title_en}/>
                         {sectionslist}
-                        <section>
-                        <h1 className="headline">Choose Us If You Are Looking For</h1>
-                        <div class="card-group">
-                            <div class="card">
-                                <img class="card-img-top icon" src={original} alt="Card image cap"/>
-                                <div class="card-body text-center">
-                                <h4 class="card-title">Originality</h4>
-                                <p class="card-text">
-                                Vivamus mattis turpis nisl, eu imperdiet eros rutrum in. Ut vestibulum elit consequat, ornare augue id, pretium libero.     
-                                </p>
-                                </div>
-                            </div>
-                            <div class="card">
-                                <img class="card-img-top icon" src={tech} alt="Card image cap"/>
-                                <div class="card-body text-center">
-                                <h4 class="card-title">10X Ahead Technology</h4>
-                                <p class="card-text">
-                                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin dignissim facilisis magna quis ultricies. Vestibulum sit amet porttitor neque. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Ut sit amet sagittis urna, finibus fermentum nibh.                                    </p>
-                                </div>
-                            </div>
-                            <div class="card">
-                                <img class="card-img-top icon" src={tech} alt="Card image cap"/>
-                                <div class="card-body text-center">
-                                <h4 class="card-title">10X Ahead Technology</h4>
-                                <p class="card-text">
-                                Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Ut sit amet sagittis urna, finibus fermentum nibh.                                </p>
-                                </div>
-                            </div>
+                    </div>
+
+                    <div className="page-content">
+                        <div className="card-deck">
+                            <Card 
+                            color= "pink"
+                            image= {vision}
+                            image_type= "icon"
+                            header= {<h3>Vision</h3>}
+                            text= {<p>{page.frontmatter.vision_en}</p>}
+                            />
+                            <Card 
+                            color="purple"
+                            image= {mission}
+                            image_type= "icon"
+                            header= {<h3>Mission</h3>}
+                            text= {<p>{page.frontmatter.mission_en}</p>}
+                            />
                         </div>
-                        </section>
-                        <section>
+                    </div>
+
+                    <div className="page-content">
+                        <Headline title={page.frontmatter.features_title_en}/>
+                        <div className="card-deck">
+                            {featureslist}
+                        </div>
+                    </div>
+
+                        <div className="page-content">
                         <h1 className="headline">Our Team</h1>
                         <div className="card-deck">
                                 <div className="card member-card">
@@ -134,16 +159,15 @@ class About extends React.Component {
                                     <Link className="btn btn-primary btn-block" href="#">Info</Link>
                                     </div>
                                 </div>
+                            </div>
                         </div>
-                        </section>
+
                     </div>
                 </div>
+                <Footer />
             </div>
-          </div>
-          <Footer />
+            <Cover id="bg"></Cover>
         </div>
-        <Cover id="bg"></Cover>
-            </div>
         )
     }
 }
@@ -165,6 +189,8 @@ export const aboutQuery = graphql`
             description_en
             vision_en
             mission_en
+            sections_title_en
+            features_title_en
             cover {
                 childImageSharp {
                     resize (width: 1920){
