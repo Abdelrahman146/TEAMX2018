@@ -28,12 +28,12 @@ sections:
 features:
     - title_en: "Creative Ideas"
       title_ar: "إبداع و إبتكار"
-      icon: "./features/creative.png"
+      image: "./features/creative.png"
       description_en: "Creativity guarantees success. TeamX unites you with professionals of IT solutions in UAE. They step into your boots and collide your business with creativity to take you to the heights of success in UAE"
       description_ar: "الإبتكار و الأفكار النيرة ستضمن لكم النجاح . فريق تيم إكس فريق  مبتكر و متميز حيث يوفر لكم الحلول المبتكرة التي ستضمن لكم استمرار نجاحاتكم في عالم التقنية المتجدد في سوق دولة الإمارات العربية المتحدة."
     - title_en: "WIN, we WIN !!"
       title_ar: "نجاحكم هو نجاحنا"
-      icon: "./features/success.png"
+      image: "./features/success.png"
       description_en: "TeamX doesn't make customers only, we make partners and lifelong partnerships. Our WIN is associated with your WIN. We work as a team and devise ideas and strategies that take your business to the next level, are you ready?"
       description_ar: "فريق تيم إكس ليس هدفه مادي فقط ولكن هدفنا إنجاح عملائنا، فبنجاح عملائنا تتحقق سلسلة نجاحات فريق تيم إكس. فريقنا يعمل كفريق واحد وينشئ إستراتيجيات لتحقيق النجاح المنشود من قبل عملائنا ونهتم جدا في نقل مستوى النتائج الى مستوى اعلى من التميز و التقدم المدروس بعناية جيدة."
 ---

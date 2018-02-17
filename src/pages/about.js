@@ -1,15 +1,13 @@
 import React from 'react'
 import Link from 'gatsby-link'
-import get from 'lodash/get'
-import sortBy from 'lodash/sortBy'
 import Helmet from 'react-helmet'
-import LazyLoad from 'react-lazyload'
 import styled from "styled-components";
 
 //components
 import Header from '../components/Header'
 import Footer from '../components/Footer'
 import TitleBox from '../components/TitleBox'
+import Section from '../components/Section'
 
 import teamx from '../images/teamx.png'
 import abdel from '../images/team/abdel.jpg'
@@ -29,6 +27,21 @@ class About extends React.Component {
         const Cover = styled.div`
                 background-image: url(${bg});
         `;
+
+        //fetch sections
+        const sectionslist = [];
+        page.frontmatter.sections.forEach(section => {
+            const image = section.image.childImageSharp.resize.src
+            sectionslist.push(
+              <Section
+              title={section.title_en}
+              image={image}
+              description={section.description_en}
+              />
+            )
+          }
+        )
+
         return (
             <div>
             <div className="content">
@@ -44,26 +57,7 @@ class About extends React.Component {
             <div className="row">
                 <div className="col-sm">
                     <div className="page">
-                        <section>
-                        <h1 className="headline">Who We Are ?</h1>
-                        <div className="card">
-                            <div className="card-body">
-                            <div className="row">
-                                <div className="col-sm-4">
-                                    <img src={teamx} alt="teamx-logo"/>
-                                </div>
-                                <div className="align-middle col-sm-8">
-                                    <div className="card-text">
-                                    <p className="text-justify">
-                                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec fringilla aliquam dolor, eget euismod lorem semper vel. Nulla molestie odio ipsum, a hendrerit diam hendrerit quis. Pellentesque turpis dolor, viverra in nisl vitae, consequat malesuada ante. Duis at neque ipsum. Integer gravida lacus lorem, vel venenatis lectus consequat eu. Vivamus placerat augue erat, in euismod neque maximus id. Ut maximus dignissim ipsum quis vulputate. Vestibulum eu ex facilisis, accumsan quam vitae, pellentesque mauris. Praesent tincidunt lobortis arcu, vitae finibus lacus bibendum at. Quisque mollis enim ac libero mattis sodales. Praesent tincidunt elit non tellus porttitor hendrerit. Mauris metus ante, feugiat mollis sem at, malesuada tincidunt mauris. Nunc facilisis vulputate erat. Pellentesque vehicula a massa et aliquam. 
-                                    </p>
-                                    <Link className="btn btn-primary" href="#">Ask</Link>
-                                    </div>
-                                </div>
-                            </div>
-                            </div>
-                        </div>
-                        </section>
+                        {sectionslist}
                         <section>
                         <h1 className="headline">Choose Us If You Are Looking For</h1>
                         <div class="card-group">
@@ -169,12 +163,36 @@ export const aboutQuery = graphql`
             page_title_en
             subtitle_en
             description_en
+            vision_en
+            mission_en
             cover {
                 childImageSharp {
                     resize (width: 1920){
                         src
                     }
                 }
+            }
+            sections {
+                title_en
+                image {
+                    childImageSharp {
+                        resize (width: 500){
+                            src
+                        }
+                    }
+                }
+                description_en
+            }
+            features {
+                title_en
+                image {
+                    childImageSharp {
+                        resize (width: 150){
+                            src
+                        }
+                    }
+                }
+                description_en
             }
         }
         }
