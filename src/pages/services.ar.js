@@ -31,10 +31,10 @@ class About extends React.Component {
             const image = service.image.childImageSharp.resize.src
             serviceslist.push(
               <Section
-              title={service.title_en}
+              title={service.title_ar}
               image={image}
               imageTransparent= {service.imageTransparent}
-              description={service.description_en}
+              description={service.description_ar}
               btn_text="Read More"
               btn_link="/"
               order= {i++}
@@ -46,23 +46,25 @@ class About extends React.Component {
             <div>
             <div className="content">
             <Header
-            language="العربية"
+            language="English"
             />
             <div className="container-fluid">
             <TitleBox
-            pageTitle={page.frontmatter.page_title_en}
-            pageSubtitle={page.frontmatter.subtitle_en}
-            pageDescription={page.frontmatter.description_en}
+            pageTitle={page.frontmatter.page_title_ar}
+            pageSubtitle={page.frontmatter.subtitle_ar}
+            pageDescription={page.frontmatter.description_ar}
              />
             <div className="page">
                 <div className="page-content">
-                    <Headline title={page.frontmatter.services_title_en} />
+                    <Headline title={page.frontmatter.services_title_ar} />
                     {serviceslist}
                 </div>
             </div>
           </div>
           
-          <Footer />
+            <Footer 
+            lang="ar"
+            />
         </div>
         <Cover id="bg"></Cover>
             </div>
@@ -73,14 +75,14 @@ class About extends React.Component {
 export default About
 
 export const pageQuery = graphql`
-    query ServicesQuery {
+    query ServicesQueryAr {
         service: markdownRemark(frontmatter:{slug: {eq:"services"}}){
             frontmatter {
-            title_en
-            page_title_en
-            subtitle_en
-            description_en
-            services_title_en
+            title_ar
+            page_title_ar
+            subtitle_ar
+            description_ar
+            services_title_ar
             cover {
                 childImageSharp {
                     resize (width: 1920){
@@ -95,8 +97,8 @@ export const pageQuery = graphql`
             edges {
             node{
                 frontmatter{
-                title_en
-                description_en
+                title_ar
+                description_ar
                 image {
                     childImageSharp {
                         resize (width: 500){

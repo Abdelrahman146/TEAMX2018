@@ -11,16 +11,13 @@ import Header from '../components/Header'
 import Footer from '../components/Footer'
 import TitleBox from '../components/TitleBox'
 
-
+import bg from '../images/404.jpg'
 
 class Index extends React.Component {
     
     render() {
         
         const { data } = this.props
-        const metadata = data.site.siteMetadata
-        const page = data.markdownRemark
-        const bg = page.frontmatter.cover == null ? "" : page.frontmatter.cover.childImageSharp.resize.src
         const Cover = styled.div`
                 background-image: url(${bg});
         `;
@@ -28,20 +25,26 @@ class Index extends React.Component {
             <div>
             <div className="content">
             <Header
-            language="العربية"
+            language="English"
             />
             <Helmet>
                 <meta charSet="utf-8" />
-                <title>{metadata.title} | {page.frontmatter.title_en}</title>
+                <title>{data.site.sitemetadata.title_ar}</title>
             </Helmet>
             <div className="container-fluid">
             <TitleBox
-            pageTitle={page.frontmatter.page_title_en}
-            pageSubtitle={page.frontmatter.subtitle_en}
-            pageDescription={page.frontmatter.description_en}
+            pageTitle="404"
+            pageSubtitle="We are Sorry, this page seems doesn't exist or still under construction"
+            pageSubtitle="عذرا، هذه الصفحة غير متاحة او تحت الصيانة"
+            pageDescription=""
              />
+             <Menu 
+             lang="ar"
+            />
             </div>
-            <Footer />
+            <Footer 
+            lang="ar"
+            />
             </div>
             <Cover id="bg"></Cover>
             </div>
@@ -52,26 +55,11 @@ class Index extends React.Component {
 export default Index
 
 export const pageQuery = graphql`
-    query IndexQuery {
+    query arQuery {
         site{
             siteMetadata{
-            title
+            title_ar
             }
-        }
-        markdownRemark(frontmatter:{slug: {eq:"home"}}){
-            frontmatter {
-            title_en
-            page_title_en
-            subtitle_en
-            description_en
-            cover {
-                childImageSharp {
-                    resize (width: 1920){
-                        src
-                    }
-                }
-            }
-        }
         }
     }
 `

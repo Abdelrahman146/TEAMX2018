@@ -29,7 +29,7 @@ class Index extends React.Component {
             />
             <Helmet>
                 <meta charSet="utf-8" />
-                <title>{data.site.siteMetadata.title}</title>
+                <title>{data.site.sitemetadata.title_en}</title>
             </Helmet>
             <div className="container-fluid">
             <TitleBox
@@ -37,8 +37,13 @@ class Index extends React.Component {
             pageSubtitle="We are Sorry, this page seems doesn't exist or still under construction"
             pageDescription=""
              />
+             <Menu 
+             lang="en"
+            />
             </div>
-            <Footer />
+            <Footer 
+            lang="en"
+            />
             </div>
             <Cover id="bg"></Cover>
             </div>
@@ -49,10 +54,10 @@ class Index extends React.Component {
 export default Index
 
 export const pageQuery = graphql`
-    query nQuery {
+    query enQuery {
         site{
             siteMetadata{
-            title
+            title_en
             }
         }
     }

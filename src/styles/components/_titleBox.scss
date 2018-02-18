@@ -7,12 +7,12 @@
     color: $white;
     text-align: center;
     vertical-align: center;
-    margin-top: 130px;
     .inner-box {
-        
+        margin-top: 130px;
         margin-bottom: 50px;
         .title {
             font-weight: 600;
+            margin-bottom: 20px;
         }
         .subtitle {
             font-weight: 400;
@@ -79,8 +79,11 @@
         color: $white;
         text-align: center;
         vertical-align: center;
-        margin-top: 60px;
+        
         //padding: 0 15px;
+        .inner-box {
+            margin-top: 60px;
+        }
         .title {
             font-weight: 600;
             font-size: 2rem;

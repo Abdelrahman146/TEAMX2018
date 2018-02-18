@@ -19,14 +19,6 @@ class TitleBox extends React.Component {
                           <h4 className="subtitle">{data.pageSubtitle}</h4>
                           <p className="description">{data.pageDescription}</p>
                       </div>
-                      <nav>
-                          <ul>
-                              <li><Link to="/about">About us</Link></li>
-                              <li><Link to="/services">Services</Link></li>
-                              <li><Link to="/contact">Contact us</Link></li>
-                              <li><Link to="/blog">Blog</Link></li>
-                          </ul>
-                      </nav>
                   </div>
             </div>
           </div>

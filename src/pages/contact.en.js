@@ -53,7 +53,7 @@ class Contact extends React.Component {
             <div>
             <Helmet>
                 <meta charSet="utf-8" />
-                <title>{metadata.title} | {page.frontmatter.title_en}</title>
+                <title>{metadata.title_en} | {page.frontmatter.title_en}</title>
             </Helmet>
             <div className="content">
             <Header
@@ -110,7 +110,9 @@ class Contact extends React.Component {
                 </div>
             </div>
           </div>
-          <Footer />
+        <Footer 
+        lang="en"
+        />
         </div>
         <div id="bg"></div>
             </div>
@@ -121,10 +123,10 @@ class Contact extends React.Component {
 export default Contact
 
 export const contactQuery = graphql`
-    query ContactQuery {
+    query ContactQuer {
         site{
             siteMetadata{
-            title
+            title_en
             }
         }
         markdownRemark(frontmatter:{slug: {eq:"contact"}}){

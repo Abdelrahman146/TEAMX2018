@@ -1,6 +1,7 @@
 module.exports = {
   siteMetadata: {
-    title: 'TEAMX IT Solutions',
+    title_en: 'TEAMX IT Solutions',
+    title_ar: 'تيم اكس لخدمات التكنولوجيا',
     description: 'This is teamx website developed by gatsby',
     siteUrl: 'http://www.teamx.ae',
     author: 'Abdel Rahman Harahsheh',
@@ -86,5 +87,12 @@ module.exports = {
     'gatsby-plugin-sharp',
     'gatsby-transformer-sharp',
     'gatsby-plugin-styled-components',
+    {
+      resolve: 'gatsby-plugin-i18n',
+      options: {        
+        langKeyDefault: 'en',
+        useLangKeyLayout: false
+      }
+    },
   ],
 }

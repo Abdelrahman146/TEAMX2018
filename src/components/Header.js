@@ -15,7 +15,7 @@ class Header extends React.Component {
         return(
             <div className="header">
             <nav className="navbar navbar-light">
-                <Link className="navbar-brand" to="/">
+                <Link className="navbar-brand" to={data.language == "العربية" ? "/en/" : "/ar/"}>
                     <img src={logo} alt="teamx logo"/>
                 </Link>
                 <span className="navbar-text">

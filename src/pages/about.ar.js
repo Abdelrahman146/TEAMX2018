@@ -34,12 +34,12 @@ class About extends React.Component {
             const image = section.image.childImageSharp.resize.src
             sectionslist.push(
               <Section
-              title={section.title_en}
+              title={section.title_ar}
               image={image}
               imageTransparent= {section.imageTransparent}
-              description={section.description_en}
-              btn_text= {section.button_text_en}
-              btn_link={section.button_link_en}
+              description={section.description_ar}
+              btn_text= {section.button_text_ar}
+              btn_link={section.button_link_ar}
               order= {i++}
               />
             )
@@ -54,8 +54,8 @@ class About extends React.Component {
               color= ""
               image= {feature.image}
               image_type= "icon"
-              header= {<h4>{feature.title_en}</h4>}
-              text= {<p>{feature.description_en}</p>}
+              header= {<h4>{feature.title_ar}</h4>}
+              text= {<p>{feature.description_ar}</p>}
               />
             )
           }
@@ -65,24 +65,24 @@ class About extends React.Component {
             <div>
             <Helmet>
                 <meta charSet="utf-8" />
-                <title>{metadata.title} | {page.frontmatter.title_en}</title>
+                <title>{metadata.title_ar} | {page.frontmatter.title_ar}</title>
             </Helmet>
             <div className="content">
             <Header
-            language="العربية"
+            language="English"
             />
             <div className="container-fluid">
                 <TitleBox
-                pageTitle={page.frontmatter.page_title_en}
-                pageSubtitle={page.frontmatter.subtitle_en}
-                pageDescription={page.frontmatter.description_en}
+                pageTitle={page.frontmatter.page_title_ar}
+                pageSubtitle={page.frontmatter.subtitle_ar}
+                pageDescription={page.frontmatter.description_ar}
                 />
                 <div className="page">
 
                     <div className="row">
                         <div className="col">
                             <div class="page-content">
-                                <Headline title={page.frontmatter.sections_title_en}/>
+                                <Headline title={page.frontmatter.sections_title_ar}/>
                                 {sectionslist}
                             </div>
                         </div>
@@ -93,18 +93,18 @@ class About extends React.Component {
                             <div className="page-content">
                                 <div className="card-deck">
                                     <Card 
-                                    color= "pink"
-                                    image= "eye"
-                                    image_type= "icon"
-                                    header= {<h3>Vision</h3>}
-                                    text= {<p>{page.frontmatter.vision_en}</p>}
-                                    />
-                                    <Card 
                                     color="purple"
                                     image= "flag"
                                     image_type= "icon"
-                                    header= {<h3>Mission</h3>}
-                                    text= {<p>{page.frontmatter.mission_en}</p>}
+                                    header= {<h3>مهمتنا</h3>}
+                                    text= {<p>{page.frontmatter.mission_ar}</p>}
+                                    />
+                                    <Card 
+                                    color= "pink"
+                                    image= "eye"
+                                    image_type= "icon"
+                                    header= {<h3>رؤيتنا</h3>}
+                                    text= {<p>{page.frontmatter.vision_ar}</p>}
                                     />
                                 </div>
                             </div>
@@ -114,7 +114,7 @@ class About extends React.Component {
                     <div className="row">
                         <div className="col">
                             <div className="page-content">
-                                <Headline title={page.frontmatter.features_title_en}/>
+                                <Headline title={page.frontmatter.features_title_ar}/>
                                 <div className="card-deck">
                                     {featureslist}
                                 </div>
@@ -180,7 +180,9 @@ class About extends React.Component {
 
                     </div>
                 </div>
-                <Footer />
+                <Footer 
+                lang="ar"
+                />
             </div>
             <Cover id="bg"></Cover>
         </div>
@@ -191,22 +193,22 @@ class About extends React.Component {
 export default About
 
 export const aboutQuery = graphql`
-    query AboutQuery {
+    query AboutQueryAr {
         site{
             siteMetadata{
-            title
+            title_ar
             }
         }
         markdownRemark(frontmatter:{slug: {eq:"about"}}){
             frontmatter {
-            title_en
-            page_title_en
-            subtitle_en
-            description_en
-            vision_en
-            mission_en
-            sections_title_en
-            features_title_en
+            title_ar
+            page_title_ar
+            subtitle_ar
+            description_ar
+            vision_ar
+            mission_ar
+            sections_title_ar
+            features_title_ar
             cover {
                 childImageSharp {
                     resize (width: 1920){
@@ -215,7 +217,7 @@ export const aboutQuery = graphql`
                 }
             }
             sections {
-                title_en
+                title_ar
                 image {
                     childImageSharp {
                         resize (width: 500){
@@ -224,14 +226,14 @@ export const aboutQuery = graphql`
                     }
                 }
                 imageTransparent
-                description_en
-                button_text_en
-                button_link_en
+                description_ar
+                button_text_ar
+                button_link_ar
             }
             features {
-                title_en
+                title_ar
                 image
-                description_en
+                description_ar
             }
         }
         }
