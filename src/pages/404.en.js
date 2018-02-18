@@ -30,7 +30,7 @@ class Index extends React.Component {
             />
             <Helmet>
                 <meta charSet="utf-8" />
-                <title>{data.site.sitemetadata.title_en}</title>
+                <title>{metadata.title_en}</title>
             </Helmet>
             <div className="container-fluid">
             <TitleBox
