@@ -5,6 +5,7 @@ import sortBy from 'lodash/sortBy'
 import Helmet from 'react-helmet'
 import LazyLoad from 'react-lazyload'
 import styled from "styled-components";
+import GoogleMap from 'google-map-react'
 
 //components
 import Header from '../components/Header'
@@ -18,8 +19,13 @@ import marketing from '../images/services/marketing.png'
 
 
 class Contact extends React.Component {
+
+    static defaultProps = {
+        center: {lat: 59.95, lng: 30.33},
+        zoom: 11
+      };
+
     render() {
-        
         return (
             <div>
             <div className="content">
@@ -35,52 +41,60 @@ class Contact extends React.Component {
             <div className="row">
                 <div className="col-sm">
                     <div className="page">
+                    <div className="map">
+                        <GoogleMap
+                        bootstrapURLKeys={{ key: ['AIzaSyA6GNEZY4PxhcDWj4uN-1oR9_-CzJ5BMKc']}}
+                        defaultCenter= {this.props.center}
+                        defaultZoom= {11}
+                        />
+                    </div>,
+                        
                         <section>
-                        <h1 className="headline">Cotact Form</h1>
+                        <h1 className="headline">Cotact htmlForm</h1>
                         <div className="card">
                             <div className="card-body">
                             <form>
-                            <div class="form-group">
-                                <label for="exampleInputEmail1">Email address</label>
-                                <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email"/>
-                                <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
+                            <div className="formm-group">
+                                <label htmlFor="exampleInputEmail1">Email address</label>
+                                <input type="email" className="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email"/>
+                                <small id="emailHelp" className="form-text text-muted">We'll never share your email with anyone else.</small>
                             </div>
-                            <div class="form-group">
-                                <label for="exampleInputPassword1">Name</label>
-                                <input type="text" class="form-control" id="exampleInputPassword1" placeholder="Name"/>
+                            <div className="form-group">
+                                <label htmlFor="exampleInputPassword1">Name</label>
+                                <input type="text" className="form-control" id="exampleInputPassword1" placeholder="Name"/>
                             </div>
-                            <div class="form-group">
-                                <label for="exampleInputPassword1">Message</label>
-                                <textarea class="form-control" id="exampleInputPassword1" placeholder="Write Your Message Here"/>
+                            <div className="form-group">
+                                <label htmlFor="exampleInputPassword1">Message</label>
+                                <textarea className="form-control" id="exampleInputPassword1" placeholder="Write Your Message Here"/>
                             </div>
-                            <button type="submit" class="btn btn-primary">Send</button>
+                            <button type="submit" className="btn btn-primary">Send</button>
                             </form>
                             </div>
                         </div>
                         </section>
                         <section>
                         <h1 className="headline">Contact Info</h1>
-                        <div class="card-deck">
-                            <div class="card">
-                                <div class="card-body text-center">
-                                <h4 class="card-title">Email</h4>
-                                <p class="card-text">
+                        <div className="card-deck">
+                            <div className="card">
+                                <div className="card-body text-center">
+                                <h4 className="card-title">Email</h4>
+                                <p className="card-text">
                                     Ask@teamx.ae
                                 </p>
                                 </div>
                             </div>
-                            <div class="card">
-                                <div class="card-body text-center">
-                                <h4 class="card-title">Phone</h4>
-                                <p class="card-text">
+                            <div className="card">
+                                <div className="card-body text-center">
+                                <h4 className="card-title">Phone</h4>
+                                <p className="card-text">
                                 +971-123456789    
                                 </p>
                                 </div>
                             </div>
-                            <div class="card">
-                                <div class="card-body text-center">
-                                <h4 class="card-title">Address</h4>
-                                <p class="card-text">
+                            <div className="card">
+                                <div className="card-body text-center">
+                                <h4 className="card-title">Address</h4>
+                                <p className="card-text">
                                     Dubai, UAE
                                 </p>
                                 </div>

@@ -29,6 +29,7 @@
     "gatsby-source-filesystem": "^1.5.10",
     "gatsby-transformer-remark": "^1.7.24",
     "gatsby-transformer-sharp": "^1.6.19",
+    "google-map-react": "^0.31.0",
     "lodash": "^4.17.4",
     "react-helmet": "^5.2.0",
     "react-lazyload": "^2.3.0",
