@@ -141,6 +141,10 @@ export const contactQuery = graphql`
             description_en
             email
             info_title_en
+            location {
+                lat
+                lng
+            }
             cover {
                 childImageSharp {
                     resize (width: 1920){
