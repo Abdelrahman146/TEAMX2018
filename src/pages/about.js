@@ -40,6 +40,7 @@ class About extends React.Component {
               <Section
               title={section.title_en}
               image={image}
+              imageTransparent= {section.imageTransparent}
               description={section.description_en}
               btn_text="Ask"
               order= {i++}
@@ -207,6 +208,7 @@ export const aboutQuery = graphql`
                         }
                     }
                 }
+                imageTransparent
                 description_en
             }
             features {

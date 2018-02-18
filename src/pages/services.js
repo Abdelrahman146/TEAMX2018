@@ -10,10 +10,9 @@ import styled from "styled-components";
 import Header from '../components/Header'
 import Footer from '../components/Footer'
 import TitleBox from '../components/TitleBox'
+import Headline from '../components/Headline'
+import Section from '../components/Section'
 
-import web from '../images/services/web.png'
-import mob from '../images/services/mob.png'
-import marketing from '../images/services/marketing.png'
 
 
 class About extends React.Component {
@@ -26,24 +25,20 @@ class About extends React.Component {
         `;
         const services = data.services.edges
         const serviceslist = [];
+        let i = 0;
         services.forEach(service => {
-            service = service.node
-            const image = "service.frontmatter.image.childImageSharp.resize.src"
+            service = service.node.frontmatter
+            const image = service.image.childImageSharp.resize.src
             serviceslist.push(
-              <div className="card member-card">
-              <img class="card-img-top vector" src={image} alt="Card image cap"/>
-                  <div className="card-body text-center">
-                  <h4 class="card-title">{service.frontmatter.title}</h4>
-                  <div className="card-text">
-                  <p className="text-muted">
-                      {service.frontmatter.description}
-                  </p>
-                  </div>
-                  </div>
-                  <div className="card-footer">
-                  <Link className="btn btn-primary btn-block" href="#">Read More</Link>
-                  </div>
-              </div>
+              <Section
+              title={service.title_en}
+              image={image}
+              imageTransparent= {service.imageTransparent}
+              description={service.description_en}
+              btn_text="Read More"
+              btn_link="/"
+              order= {i++}
+              />
             )
           }
         )
@@ -55,20 +50,14 @@ class About extends React.Component {
             />
             <div className="container-fluid">
             <TitleBox
-            pageTitle={page.frontmatter.page_title}
-            pageSubtitle={page.frontmatter.subtitle}
-            pageDescription={page.frontmatter.description}
+            pageTitle={page.frontmatter.page_title_en}
+            pageSubtitle={page.frontmatter.subtitle_en}
+            pageDescription={page.frontmatter.description_en}
              />
-            <div className="row">
-                <div className="col-sm">
-                    <div className="page">
-                        <section>
-                        <h1 className="headline">{page.frontmatter.title}</h1>
-                        <div className="card-deck">
-                            {serviceslist}
-                        </div>
-                        </section>
-                    </div>
+            <div className="page">
+                <div className="page-content">
+                    <Headline title={page.frontmatter.services_title_en} />
+                    {serviceslist}
                 </div>
             </div>
           </div>
@@ -91,6 +80,7 @@ export const pageQuery = graphql`
             page_title_en
             subtitle_en
             description_en
+            services_title_en
             cover {
                 childImageSharp {
                     resize (width: 1920){
@@ -107,13 +97,14 @@ export const pageQuery = graphql`
                 frontmatter{
                 title_en
                 description_en
-                # image {
-                #     childImageSharp {
-                #         resize (width: 200){
-                #             src
-                #         }
-                #     }
-                # }
+                image {
+                    childImageSharp {
+                        resize (width: 500){
+                            src
+                        }
+                    }
+                }
+                imageTransparent
                 }
             }
             }

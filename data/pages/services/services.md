@@ -10,6 +10,6 @@ subtitle_en: ""
 subtitle_ar: ""
 description_en: ""
 description_ar: ""
-services_description_en: "TeamX offers so many services, below are the details, kindly have a look:"
-services_descriptiin_ar: "فريق تيم إكس يقدم لكم مجموعة خدمات متميزة ، أدناه تفاصيل الخدمات:"
+services_title_en: "TeamX offers so many services, below are the details, kindly have a look:"
+services_title_ar: "فريق تيم إكس يقدم لكم مجموعة خدمات متميزة ، أدناه تفاصيل الخدمات:"
 ---
