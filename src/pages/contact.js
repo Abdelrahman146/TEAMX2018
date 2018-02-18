@@ -134,6 +134,7 @@ export const contactQuery = graphql`
             subtitle_en
             description_en
             email
+            info_title_en
             cover {
                 childImageSharp {
                     resize (width: 1920){
