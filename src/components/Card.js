@@ -13,6 +13,15 @@ class Card extends React.Component {
 
     render() {
         const data = this.props
+
+        let img = null
+        if(data.image_type == 'icon') {
+            img = <span className={"card-icon typcn typcn-" + data.image}></span>
+        }else {
+            img = <img className='card-img-top'src={data.image} alt={data.image_alt}/>
+
+        }
+
         let footer = null
         if(data.footer != null) {
             footer = <div className="card-footer">
@@ -23,7 +32,7 @@ class Card extends React.Component {
         }
         return(
             <div className={"card card-" + data.color}>
-                <img className={data.image_type == 'icon' ? 'card-img-top icon' : 'card-img-top'} src={data.image} alt={data.image_alt}/>
+                {img}
                 <div className="text-center">
                     <div className="card-header">
                         {data.header}

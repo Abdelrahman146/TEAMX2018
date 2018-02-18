@@ -11,14 +11,10 @@ import Section from '../components/Section'
 import Headline from '../components/Headline'
 import Card from '../components/Card'
 
-import mission from '../images/mission.png'
-import vision from '../images/vision.png'
+
 import abdel from '../images/team/abdel.jpg'
 import member1 from '../images/team/member1.jpg'
 import member2 from '../images/team/member2.jpg'
-
-import original from '../images/features/original.png'
-import tech from '../images/features/tech.png'
 
 
 class About extends React.Component {
@@ -52,11 +48,10 @@ class About extends React.Component {
         //fetch features
         const featureslist = [];
         page.frontmatter.features.forEach(feature => {
-            const image = feature.image.childImageSharp.resize.src
             featureslist.push(
               <Card 
               color= ""
-              image= {image}
+              image= {feature.image}
               image_type= "icon"
               header= {<h4>{feature.title_en}</h4>}
               text= {<p>{feature.description_en}</p>}
@@ -83,85 +78,104 @@ class About extends React.Component {
                 />
                 <div className="page">
 
-                    <div class="page-content">
-                        <Headline title={page.frontmatter.sections_title_en}/>
-                        {sectionslist}
-                    </div>
-
-                    <div className="page-content">
-                        <div className="card-deck">
-                            <Card 
-                            color= "pink"
-                            image= {vision}
-                            image_type= "icon"
-                            header= {<h3>Vision</h3>}
-                            text= {<p>{page.frontmatter.vision_en}</p>}
-                            />
-                            <Card 
-                            color="purple"
-                            image= {mission}
-                            image_type= "icon"
-                            header= {<h3>Mission</h3>}
-                            text= {<p>{page.frontmatter.mission_en}</p>}
-                            />
+                    <div className="row">
+                        <div className="col">
+                            <div class="page-content">
+                                <Headline title={page.frontmatter.sections_title_en}/>
+                                {sectionslist}
+                            </div>
                         </div>
                     </div>
 
-                    <div className="page-content">
-                        <Headline title={page.frontmatter.features_title_en}/>
-                        <div className="card-deck">
-                            {featureslist}
+                    <div className="row">
+                        <div className="col">
+                            <div className="page-content">
+                                <div className="card-deck">
+                                    <Card 
+                                    color= "pink"
+                                    image= "eye"
+                                    image_type= "icon"
+                                    header= {<h3>Vision</h3>}
+                                    text= {<p>{page.frontmatter.vision_en}</p>}
+                                    />
+                                    <Card 
+                                    color="purple"
+                                    image= "flag"
+                                    image_type= "icon"
+                                    header= {<h3>Mission</h3>}
+                                    text= {<p>{page.frontmatter.mission_en}</p>}
+                                    />
+                                </div>
+                            </div>
                         </div>
                     </div>
 
-                        <div className="page-content">
-                        <h1 className="headline">Our Team</h1>
-                        <div className="card-deck">
-                                <div className="card member-card">
-                                <img class="card-img-top personal-img" src={abdel} alt="Card image cap"/>
-                                    <div className="card-body text-center">
-                                    <h4 class="card-title">Abdel Rahman</h4>
-                                    <div className="card-text">
-                                    <p className="text-muted">
-                                        <strong>Web Developer</strong>
-                                    </p>
-                                    </div>
-                                    
-                                    </div>
-                                    <div className="card-footer">
-                                    <Link className="btn btn-primary btn-block" href="#">Info</Link>
-                                    </div>
+                    <div className="row">
+                        <div className="col">
+                            <div className="page-content">
+                                <Headline title={page.frontmatter.features_title_en}/>
+                                <div className="card-deck">
+                                    {featureslist}
                                 </div>
-                                <div className="card member-card">
-                                <img class="card-img-top personal-img" src={member2} alt="Card image cap"/>
-                                    <div className="card-body text-center">
-                                    <h4 class="card-title">Member Name</h4>
-                                    <div className="card-text">
-                                    <p className="text-muted">
-                                        <strong>Member Position</strong>
-                                    </p>
+                            </div>
+                        </div>
+                    </div>
+                    
+
+                    <div className="row">
+                        <div className="col">
+                            <div className="page-content">
+                                <h1 className="headline">Our Team</h1>
+                                <div className="card-deck">
+                                    <div className="card member-card">
+                                    <img class="card-img-top personal-img" src={abdel} alt="Card image cap"/>
+                                        <div className="card-body text-center">
+                                        <h4 class="card-title">Abdel Rahman</h4>
+                                        <div className="card-text">
+                                        <p className="text-muted">
+                                            <strong>Web Developer</strong>
+                                        </p>
+                                        </div>
+                                        
+                                        </div>
+                                        <div className="card-footer">
+                                        <Link className="btn btn-primary btn-block" href="#">Info</Link>
+                                        </div>
                                     </div>
+                                    <div className="card member-card">
+                                    <img class="card-img-top personal-img" src={member2} alt="Card image cap"/>
+                                        <div className="card-body text-center">
+                                        <h4 class="card-title">Member Name</h4>
+                                        <div className="card-text">
+                                        <p className="text-muted">
+                                            <strong>Member Position</strong>
+                                        </p>
+                                        </div>
+                                        </div>
+                                        <div className="card-footer">
+                                        <Link className="btn btn-primary btn-block" href="#">Info</Link>
+                                        </div>
                                     </div>
-                                    <div className="card-footer">
-                                    <Link className="btn btn-primary btn-block" href="#">Info</Link>
-                                    </div>
-                                </div>
-                                <div className="card member-card">
-                                <img class="personal-img" src={member1} alt="Card image cap"/>
-                                    <div className="card-body text-center">
-                                    <h4 class="card-title">Member name</h4>
-                                    <div className="card-text">
-                                    <p className="text-muted">
-                                        <strong>Member position</strong>
-                                    </p>
-                                    </div>
-                                    </div>
-                                    <div className="card-footer">
-                                    <Link className="btn btn-primary btn-block" href="#">Info</Link>
+                                    <div className="card member-card">
+                                    <img class="personal-img" src={member1} alt="Card image cap"/>
+                                        <div className="card-body text-center">
+                                        <h4 class="card-title">Member name</h4>
+                                        <div className="card-text">
+                                        <p className="text-muted">
+                                            <strong>Member position</strong>
+                                        </p>
+                                        </div>
+                                        </div>
+                                        <div className="card-footer">
+                                        <Link className="btn btn-primary btn-block" href="#">Info</Link>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
                         </div>
+                    </div>
+
+                        
 
                     </div>
                 </div>
@@ -213,13 +227,7 @@ export const aboutQuery = graphql`
             }
             features {
                 title_en
-                image {
-                    childImageSharp {
-                        resize (width: 150){
-                            src
-                        }
-                    }
-                }
+                image
                 description_en
             }
         }

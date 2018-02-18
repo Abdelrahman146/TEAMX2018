@@ -1,15 +1,12 @@
 import React from 'react'
 import Link from 'gatsby-link'
-import { siteMetadata } from '../../gatsby-config'
 import emergence from 'emergence.js'
+//import * as FontAwesome from 'react-icons/fa'
 
 //
 
 
 import '../styles/main.scss'
-import 'animate.css/animate.css'
-import 'prismjs/themes/prism-okaidia.css'
-import 'font-awesome/css/font-awesome.css'
 
 
 class Template extends React.Component {

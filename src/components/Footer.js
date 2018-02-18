@@ -1,12 +1,7 @@
 
 import React from 'react'
 
-// images
-import twitter from '../images/sm/twitter.png';
-import fb from '../images/sm/fb.png';
-import googleplus from '../images/sm/google.png';
-import insta from '../images/sm/insta.png';
-import youtube from '../images/sm/youtube.png';
+
 
 
 class Footer extends React.Component {
@@ -19,11 +14,11 @@ class Footer extends React.Component {
         return(
             <div className="footer text-center">
                 <ul className="socialMedia">
-                    <li><a href="/"><img src={twitter} alt="twitter"/></a></li>
-                    <li><a href="/"><img src={fb} alt="facebook"/></a></li>
-                    <li><a href="/"><img src={insta} alt="instagram"/></a></li>
-                    <li><a href="/"><img src={youtube} alt="youtube"/></a></li>
-                    <li><a href="/"><img src={googleplus} alt="googleplus"/></a></li>
+                    <li><a href="/"><span className="typcn typcn-social-facebook-circular"></span></a></li>
+                    <li><a href="/"><span className="typcn typcn-social-instagram-circular"></span></a></li>
+                    <li><a href="/"><span className="typcn typcn-social-twitter-circular"></span></a></li>
+                    <li><a href="/"><span className="typcn typcn-social-youtube-circular"></span></a></li>
+                    <li><a href="/"><span className="typcn typcn-social-google-plus-circular"></span></a></li>
                 </ul>
                 <p className="copyright">This Website is Designed and Developed By TEAMX - 2018</p>
             </div>

@@ -11,11 +11,10 @@ import GoogleMap from 'google-map-react'
 import Header from '../components/Header'
 import Footer from '../components/Footer'
 import TitleBox from '../components/TitleBox'
+import ContactForm from '../components/ContactForm'
+import Headline from '../components/Headline'
+import Card from '../components/Card'
 
-import teamx from '../images/teamx.png'
-import web from '../images/services/web.png'
-import mob from '../images/services/mob.png'
-import marketing from '../images/services/marketing.png'
 
 
 class Contact extends React.Component {
@@ -26,81 +25,87 @@ class Contact extends React.Component {
       };
 
     render() {
+
+        const { data } = this.props
+        const metadata = data.site.siteMetadata
+        const page = data.markdownRemark
+        const bg = page.frontmatter.cover == null ? "" : page.frontmatter.cover.childImageSharp.resize.src
+        const Cover = styled.div`
+                background-image: url(${bg});
+        `;
+
+        //fetch info
+        const infolist = [];
+        page.frontmatter.info.forEach(info => {
+            infolist.push(
+              <Card 
+              color= "purple"
+              image= {info.icon}
+              image_type= "icon"
+              header= {<h4>{info.title_en}</h4>}
+              text= {<p>{info.content_en}</p>}
+              />
+            )
+          }
+        )
+
         return (
             <div>
+            <Helmet>
+                <meta charSet="utf-8" />
+                <title>{metadata.title} | {page.frontmatter.title_en}</title>
+            </Helmet>
             <div className="content">
             <Header
             language="العربية"
             />
             <div className="container-fluid">
             <TitleBox
-            pageTitle="Contact us"
-            pageSubtitle="Neque porro quisquam est qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit.."
-            pageDescription="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent bibendum sapien vitae metus convallis condimentum."
+            pageTitle= {page.frontmatter.page_title_en}
+            pageSubtitle={page.frontmatter.subtitle_en}
+            pageDescription={page.frontmatter.description_en}
              />
             <div className="row">
                 <div className="col-sm">
                     <div className="page">
-                    <div className="map">
-                        <GoogleMap
-                        bootstrapURLKeys={{ key: ['AIzaSyA6GNEZY4PxhcDWj4uN-1oR9_-CzJ5BMKc']}}
-                        defaultCenter= {this.props.center}
-                        defaultZoom= {11}
-                        />
-                    </div>,
+
+                        <div className="map">
+                            <GoogleMap
+                            bootstrapURLKeys={{ key: ['AIzaSyA6GNEZY4PxhcDWj4uN-1oR9_-CzJ5BMKc']}}
+                            defaultCenter= {this.props.center}
+                            defaultZoom= {11}
+                            />
+                        </div>
                         
-                        <section>
-                        <h1 className="headline">Cotact htmlForm</h1>
-                        <div className="card">
-                            <div className="card-body">
-                            <form>
-                            <div className="formm-group">
-                                <label htmlFor="exampleInputEmail1">Email address</label>
-                                <input type="email" className="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email"/>
-                                <small id="emailHelp" className="form-text text-muted">We'll never share your email with anyone else.</small>
-                            </div>
-                            <div className="form-group">
-                                <label htmlFor="exampleInputPassword1">Name</label>
-                                <input type="text" className="form-control" id="exampleInputPassword1" placeholder="Name"/>
-                            </div>
-                            <div className="form-group">
-                                <label htmlFor="exampleInputPassword1">Message</label>
-                                <textarea className="form-control" id="exampleInputPassword1" placeholder="Write Your Message Here"/>
-                            </div>
-                            <button type="submit" className="btn btn-primary">Send</button>
-                            </form>
-                            </div>
-                        </div>
-                        </section>
-                        <section>
-                        <h1 className="headline">Contact Info</h1>
-                        <div className="card-deck">
-                            <div className="card">
-                                <div className="card-body text-center">
-                                <h4 className="card-title">Email</h4>
-                                <p className="card-text">
-                                    Ask@teamx.ae
-                                </p>
-                                </div>
-                            </div>
-                            <div className="card">
-                                <div className="card-body text-center">
-                                <h4 className="card-title">Phone</h4>
-                                <p className="card-text">
-                                +971-123456789    
-                                </p>
-                                </div>
-                            </div>
-                            <div className="card">
-                                <div className="card-body text-center">
-                                <h4 className="card-title">Address</h4>
-                                <p className="card-text">
-                                    Dubai, UAE
-                                </p>
+                        <div className="page-content">
+                            <div className="row">
+                                <div className="col">
+                                <h1 className="headline">Cotact Form</h1>
+                                    <ContactForm 
+                                    sendTo={page.frontmatter.email}
+                                    emailLabel="Email"
+                                    emailPlaceholder="Example@domain.com"
+                                    nameLabel="Name"
+                                    namePlaceholder="Your Name"
+                                    messageLabel="Message"
+                                    messagePlaceholder="I would like to know more about TEAMX"
+                                    buttonText="Send"
+                                    />
                                 </div>
                             </div>
                         </div>
-                        </section>
+
+                        <div className="row">
+                            <div className="col">
+                                <div className="page-content">
+                                    <Headline title={page.frontmatter.info_title_en}/>
+                                    <div className="card-deck">
+                                        {infolist}
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
                     </div>
                 </div>
             </div>
@@ -114,3 +119,34 @@ class Contact extends React.Component {
 }
 
 export default Contact
+
+export const contactQuery = graphql`
+    query ContactQuery {
+        site{
+            siteMetadata{
+            title
+            }
+        }
+        markdownRemark(frontmatter:{slug: {eq:"contact"}}){
+            frontmatter {
+            title_en
+            page_title_en
+            subtitle_en
+            description_en
+            email
+            cover {
+                childImageSharp {
+                    resize (width: 1920){
+                        src
+                    }
+                }
+            }
+            info {
+                title_en
+                icon 
+                content_en
+            }
+        }
+        }
+    }
+`

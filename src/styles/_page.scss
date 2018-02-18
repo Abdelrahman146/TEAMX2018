@@ -50,15 +50,19 @@
             // //max-width: 1700px;
             //box-shadow: 2px 2px 7px $purple-dark;
             //border: 1px solid $purple-dark;
-            .icon {
-                height: 150px;
-                width: 150px;
-                margin: 0 auto;
-                margin-top: 20px;
+            .card-icon {
+                text-align: center;
+                font-size: 150px;
+                line-height: 7.5rem;
+                //margin-top: 20px;
             }
             .card-header {
                 background-color: transparent;
                 border: none;
+            }
+            .card-body {
+                padding: 0 1.15rem;
+                padding-bottom: 1.15rem;
             }
         }
 
