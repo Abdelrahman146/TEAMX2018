@@ -64,6 +64,7 @@ class About extends React.Component {
         return (
             <div>
             <Helmet>
+                <html dir="rtl" lang="ar"/>
                 <meta charSet="utf-8" />
                 <title>{metadata.title_ar} | {page.frontmatter.title_ar}</title>
             </Helmet>

@@ -19,16 +19,15 @@ import Card from '../components/Card'
 
 class Contact extends React.Component {
 
-    static defaultProps = {
-        center: {lat: 59.95, lng: 30.33},
-        zoom: 11
-      };
-
     render() {
 
         const { data } = this.props
         const metadata = data.site.siteMetadata
         const page = data.markdownRemark
+        const loc = {
+            center: {lat: page.frontmatter.location.lat, lng: page.frontmatter.location.lng},
+            zoom: 15
+          };
         const bg = page.frontmatter.cover == null ? "" : page.frontmatter.cover.childImageSharp.resize.src
         const Cover = styled.div`
                 background-image: url(${bg});
@@ -70,11 +69,16 @@ class Contact extends React.Component {
                     <div className="page">
 
                         <div className="map">
-                            <GoogleMap
-                            bootstrapURLKeys={{ key: ['AIzaSyA6GNEZY4PxhcDWj4uN-1oR9_-CzJ5BMKc']}}
-                            defaultCenter= {this.props.center}
-                            defaultZoom= {11}
-                            />
+                        <GoogleMap
+                        bootstrapURLKeys={{ key: ['AIzaSyA6GNEZY4PxhcDWj4uN-1oR9_-CzJ5BMKc']}}
+                        defaultCenter= {loc.center}
+                        defaultZoom= {loc.zoom}
+                        >
+                            <span className="typcn typcn-location map-target"
+                            lat={loc.center.lat}
+                            lng={loc.center.lng}
+                            ></span>
+                        </GoogleMap>
                         </div>
                         
                         <div className="page-content">

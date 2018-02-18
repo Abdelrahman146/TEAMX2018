@@ -13,7 +13,7 @@ class TitleBox extends React.Component {
         let menu = null 
         if( data.lang == 'ar'){
             menu = 
-            <ul>
+            <ul className="nav-ar">
             <li><Link to="/ar/about">من نحن</Link></li>
             <li><Link to="/ar/services">خدماتنا</Link></li>
             <li><Link to="/ar/contact">تواصل معنا</Link></li>

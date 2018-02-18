@@ -18,6 +18,7 @@ import Section from '../components/Section'
 class About extends React.Component {
     render() {
         const { data } = this.props
+        const metadata = data.site.siteMetadata
         const page = data.service
         const bg = page.frontmatter.cover == null ? "" : page.frontmatter.cover.childImageSharp.resize.src
         const Cover = styled.div`
@@ -44,6 +45,11 @@ class About extends React.Component {
         )
         return (
             <div>
+            <Helmet>
+                <html dir="rtl" lang="ar"/>
+                <meta charSet="utf-8" />
+                <title>{metadata.title_ar} | {page.frontmatter.title_ar}</title>
+            </Helmet>
             <div className="content">
             <Header
             language="English"
@@ -76,6 +82,11 @@ export default About
 
 export const pageQuery = graphql`
     query ServicesQueryAr {
+        site{
+            siteMetadata{
+            title_ar
+            }
+        }
         service: markdownRemark(frontmatter:{slug: {eq:"services"}}){
             frontmatter {
             title_ar

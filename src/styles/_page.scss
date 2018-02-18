@@ -16,6 +16,14 @@
         padding-top: 40px;
     }
 
+    .map-target {
+        color: $purple;
+        font-size: 64px;
+        position: absolute;
+        right: -20px;
+        bottom: -15px;
+    }
+
     .headline {
         padding: 10px;
         margin-bottom: 30px;
@@ -52,8 +60,8 @@
             //border: 1px solid $purple-dark;
             .card-icon {
                 text-align: center;
-                font-size: 150px;
-                line-height: 7.5rem;
+                font-size: 140px;
+                //line-height: 7.5rem;
                 //margin-top: 20px;
             }
             .card-header {

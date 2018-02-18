@@ -19,16 +19,15 @@ import Card from '../components/Card'
 
 class Contact extends React.Component {
 
-    static defaultProps = {
-        center: {lat: 59.95, lng: 30.33},
-        zoom: 11
-      };
-
     render() {
 
         const { data } = this.props
         const metadata = data.site.siteMetadata
         const page = data.markdownRemark
+        const loc = {
+            center: {lat: page.frontmatter.location.lat, lng: page.frontmatter.location.lng},
+            zoom: 15
+          };
         const bg = page.frontmatter.cover == null ? "" : page.frontmatter.cover.childImageSharp.resize.src
         const Cover = styled.div`
                 background-image: url(${bg});
@@ -52,6 +51,7 @@ class Contact extends React.Component {
         return (
             <div>
             <Helmet>
+                <html dir="rtl" lang="ar"/>
                 <meta charSet="utf-8" />
                 <title>{metadata.title_ar} | {page.frontmatter.title_ar}</title>
             </Helmet>
@@ -72,24 +72,30 @@ class Contact extends React.Component {
                         <div className="map">
                             <GoogleMap
                             bootstrapURLKeys={{ key: ['AIzaSyA6GNEZY4PxhcDWj4uN-1oR9_-CzJ5BMKc']}}
-                            defaultCenter= {this.props.center}
-                            defaultZoom= {11}
-                            />
+                            defaultCenter= {loc.center}
+                            defaultZoom= {loc.zoom}
+                            >
+                                <span className="typcn typcn-location map-target"
+                                lat={loc.center.lat}
+                                lng={loc.center.lng}
+                                ></span>
+                            </GoogleMap>
                         </div>
                         
                         <div className="page-content">
                             <div className="row">
                                 <div className="col">
-                                <h1 className="headline">Cotact Form</h1>
+                                <h1 className="headline">ارسل رسالة</h1>
                                     <ContactForm 
                                     sendTo={page.frontmatter.email}
-                                    emailLabel="Email"
+                                    emailLabel="البريد الالكتروني"
                                     emailPlaceholder="Example@domain.com"
-                                    nameLabel="Name"
-                                    namePlaceholder="Your Name"
-                                    messageLabel="Message"
-                                    messagePlaceholder="I would like to know more about TEAMX"
-                                    buttonText="Send"
+                                    nameLabel="الإسم"
+                                    namePlaceholder="الإسم الفاضل"
+                                    messageLabel="الرسالة"
+                                    messagePlaceholder="اود معرفة المزيد عن فريق تيم اكس"
+                                    buttonText="ارسل"
+                                    lang='ar'
                                     />
                                 </div>
                             </div>
@@ -137,6 +143,10 @@ export const contactQueryAr = graphql`
             description_ar
             email
             info_title_ar
+            location {
+                lat
+                lng
+            }
             cover {
                 childImageSharp {
                     resize (width: 1920){

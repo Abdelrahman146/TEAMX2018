@@ -13,6 +13,7 @@ section {
 
     .section-content {
         height: 100%;
+        width: 100%;
         background-color: transparent;
         border: none;
         .card-header {
@@ -27,6 +28,11 @@ section {
         }
         .card-body{
             padding: 0;
+            padding-bottom: 20px;
+            p{
+                text-align: center;
+                margin: 0 auto;
+            }
         }
     }
     

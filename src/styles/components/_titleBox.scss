@@ -25,6 +25,7 @@
     nav {
         margin-top: 0;
         ul {
+            padding-right: 0;
             display: flex;
             justify-content: center;
             margin-bottom: 0;
@@ -65,6 +66,27 @@
                     &:active {
                         background-color: $purple;
                     }
+                }
+            }
+        }
+
+        .nav-ar {
+            li {
+                &:first-child {
+                    border-right: solid 5px $white;
+                    border-left: none;
+                    border-top-left-radius: 0px;
+                    border-bottom-left-radius: 0px;
+                    border-top-right-radius: 5px;
+                    border-bottom-right-radius: 5px;
+                }
+                &:last-child {
+                    border-right: solid 5px $white;
+                    border-left: solid 5px $white;
+                    border-top-right-radius: 0px;
+                    border-bottom-right-radius: 0px;
+                    border-top-left-radius: 5px;
+                    border-bottom-left-radius: 5px;
                 }
             }
         }
@@ -120,6 +142,27 @@
                     a {
                         min-width: 0;
                         width: 100%;
+                    }
+                }
+            }
+
+            .nav-ar {
+                li {
+                    &:first-child {
+                        border-right: solid 5px $white;
+                        border-left: solid 5px $white;
+                        border-top-left-radius: 5px;
+                        border-top-right-radius: 5px;
+                        border-bottom-right-radius: 0px;
+                        border-bottom-left-radius: 0px;
+                    }
+                    &:last-child {
+                        border-right: solid 5px $white;
+                        border-left: solid 5px $white;
+                        border-top-right-radius: 0px;
+                        border-bottom-right-radius: 5px;
+                        border-top-left-radius: 0px;
+                        border-bottom-left-radius: 5px;
                     }
                 }
             }

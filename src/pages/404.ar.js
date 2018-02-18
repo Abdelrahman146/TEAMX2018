@@ -28,6 +28,7 @@ class Index extends React.Component {
             language="English"
             />
             <Helmet>
+                <html dir="rtl" lang="ar"/>
                 <meta charSet="utf-8" />
                 <title>{data.site.sitemetadata.title_ar}</title>
             </Helmet>

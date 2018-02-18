@@ -74,7 +74,7 @@ class ContactForm extends React.Component {
                 </div> 
         )
         return(
-            <div className="form">
+            <div className={"form form-" + data.lang}>
                 <div className="panel panel-default validation-panel">
                     <RenderErrors errors={this.state.formErrors} />
                 </div>
