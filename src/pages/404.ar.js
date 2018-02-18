@@ -10,6 +10,7 @@ import styled from "styled-components";
 import Header from '../components/Header'
 import Footer from '../components/Footer'
 import TitleBox from '../components/TitleBox'
+import Menu from '../components/Menu'
 
 import bg from '../images/404.jpg'
 
