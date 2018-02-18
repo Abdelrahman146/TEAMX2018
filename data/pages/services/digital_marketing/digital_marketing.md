@@ -9,7 +9,7 @@ subtitle_en: "We deliver all digital solutions to our customers"
 subtitle_ar: "نحن نوفر جميع الحلول الرقمية لعلائنا"
 description_en: "Digital marketing is the most important strategy to make your business popular"
 description_ar: "التسويق الرقمي يعتبر من اهم العناصر لنجاح المشاريع"
-image: "./pic3.jpeg"
+image: './pic3.jpeg'
 imageTransparent: false
 video: "./path/to/video"
 blurbs: 

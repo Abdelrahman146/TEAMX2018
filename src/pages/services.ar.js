@@ -36,7 +36,7 @@ class About extends React.Component {
               image={image}
               imageTransparent= {service.imageTransparent}
               description={service.description_ar}
-              btn_text="Read More"
+              btn_text="المزيد"
               btn_link="/"
               order= {i++}
               />

@@ -9,7 +9,7 @@ subtitle_en: "Experience The Virtual Life"
 subtitle_ar: "تمتع بتجربة العالم الإفتراضي"
 description_en: "The world became a small village and the need to digitalize your services is a must to cope with the changing in the world."
 description_ar: "العالم أصبح الأن قرية صغيرة لذا أتمتت الخدمات باتت من الأمور المهمة لمواكبة التحديات في العالم."
-image: "./pic2.jpeg"
+image: './pic2.jpeg'
 imageTransparent: false
 video: "./path/to/video"
 blurbs: 

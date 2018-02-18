@@ -8,7 +8,7 @@ subtitle_en: ""
 subtitle_ar: ""
 description_en: "Leave behind the traditional business techniques and beat your competitors with smartness and efficacy."
 description_ar: ""
-image: "./pic2.jpg"
+image: './pic2.jpg'
 imageTransparent: false
 video: "./path/to/video"
 blurbs:
