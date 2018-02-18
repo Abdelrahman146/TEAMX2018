@@ -18,6 +18,7 @@ class Index extends React.Component {
     render() {
         
         const { data } = this.props
+        const metadata = data.site.siteMetadata
         const Cover = styled.div`
                 background-image: url(${bg});
         `;
