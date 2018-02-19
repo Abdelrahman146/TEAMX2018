@@ -25,7 +25,7 @@ class Template extends React.Component {
     const layoutData = {
       lang: 'ar',
       title: this.props.data.site.siteMetadata.title_ar,
-      title: 'logo',
+      title: 'تيم اكس لخدمات التكنولوجيا',
       logo: logo,
       location: this.props.location.pathname,
       menu: [
