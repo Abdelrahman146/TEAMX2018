@@ -68,6 +68,7 @@ class About extends React.Component {
             <div className="content">
             <Header
             language="English"
+            logo={layout.logo}
             />
             <div className="container-fluid">
                 <TitleBox
@@ -91,18 +92,18 @@ class About extends React.Component {
                             <div className="page-content">
                                 <div className="card-deck">
                                     <Card 
-                                    color="purple"
-                                    image= "flag"
-                                    image_type= "icon"
-                                    header= {<h3>مهمتنا</h3>}
-                                    text= {<p>{page.frontmatter.mission_ar}</p>}
-                                    />
-                                    <Card 
                                     color= "pink"
                                     image= "eye"
                                     image_type= "icon"
                                     header= {<h3>رؤيتنا</h3>}
                                     text= {<p>{page.frontmatter.vision_ar}</p>}
+                                    />
+                                    <Card 
+                                    color="purple"
+                                    image= "flag"
+                                    image_type= "icon"
+                                    header= {<h3>مهمتنا</h3>}
+                                    text= {<p>{page.frontmatter.mission_ar}</p>}
                                     />
                                 </div>
                             </div>

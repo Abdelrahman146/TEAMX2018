@@ -56,6 +56,7 @@ class Contact extends React.Component {
             <div className="content">
             <Header
             language="English"
+            logo={layout.logo}
             />
             <div className="container-fluid">
             <TitleBox

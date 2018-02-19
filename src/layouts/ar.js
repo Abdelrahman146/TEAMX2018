@@ -4,7 +4,8 @@ import emergence from 'emergence.js'
 import Helmet from 'react-helmet'
 import styled from "styled-components";
 
-
+// images
+import logo from "../images/logo.png";
 
 import '../styles/main.scss'
 
@@ -24,6 +25,8 @@ class Template extends React.Component {
     const layoutData = {
       lang: 'ar',
       title: this.props.data.site.siteMetadata.title_ar,
+      title: 'logo',
+      logo: logo,
       about: {
         text: 'من نحن',
         link: '/ar/about',

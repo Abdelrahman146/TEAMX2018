@@ -28,6 +28,7 @@ class Index extends React.Component {
             <div className="content">
             <Header
             language="العربية"
+            logo={layout.logo}
             />
             <Helmet>
                 <meta charSet="utf-8" />

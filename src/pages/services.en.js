@@ -52,6 +52,7 @@ class About extends React.Component {
             <div className="content">
             <Header
             language="العربية"
+            logo={layout.logo}
             />
             <div className="container-fluid">
             <TitleBox

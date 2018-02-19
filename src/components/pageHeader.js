@@ -1,8 +1,7 @@
 import React from 'react'
 import Link from 'gatsby-link'
 
-// images
-import logo from "../images/logo.png";
+
 
 
 class Header extends React.Component {
@@ -16,7 +15,7 @@ class Header extends React.Component {
             <div className="header">
             <nav className="navbar navbar-light">
                 <Link className="navbar-brand" to={data.language == "العربية" ? "/en/" : "/ar/"}>
-                    <img src={data.logo} alt="teamx logo"/>
+                    <img src={logo} alt="teamx logo"/>
                 </Link>
                 <span className="navbar-text">
                     <Link className="text-light" to={data.language == "العربية" ? "/ar/" : "/en/"}>

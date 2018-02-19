@@ -8,24 +8,24 @@ class ContactForm extends React.Component {
     constructor (props) {
         super(props);
         this.state = {
-          email: '',
-          name: '',
-          message: '',
-          formErrors: {email: '', message: ''},
-          emailValid: false,
-          messageValid: false,
-          formValid: false
+            email: '',
+            name: '',
+            message: '',
+            formErrors: {email: '', message: ''},
+            emailValid: false,
+            messageValid: false,
+            formValid: false
         }
-      }
+    }
     
-      handleUserInput = (e) => {
+    handleUserInput = (e) => {
         const name = e.target.name;
         const value = e.target.value;
         this.setState({[name]: value},
                       () => { this.validateField(name, value) });
-      }
+    }
     
-      validateField(fieldName, value) {
+    validateField(fieldName, value) {
         let fieldValidationErrors = this.state.formErrors;
         let emailValid = this.state.emailValid;
         let messageValid = this.state.messageValid;
@@ -42,18 +42,22 @@ class ContactForm extends React.Component {
           default:
             break;
         }
-        this.setState({formErrors: fieldValidationErrors,
+        this.setState({ formErrors: fieldValidationErrors,
                         emailValid: emailValid,
                         messageValid: messageValid
                       }, this.validateForm);
-      }
+    }
     
-      validateForm() {
+    validateForm() {
         this.setState({formValid: this.state.emailValid && this.state.messageValid});
-      }
+    }
     
-      errorClass(error) {
+    errorClass(error) {
         return(error.length === 0 ? '' : 'has-error');
+    }
+
+    handleSubmit() {
+
     }
     
 
@@ -78,7 +82,7 @@ class ContactForm extends React.Component {
                 <div className="panel panel-default validation-panel">
                     <RenderErrors errors={this.state.formErrors} />
                 </div>
-                <form method="POST" action={"https://formspree.io/" + data.sendTo}>
+                <form method="POST" action={"https://formspree.io/" + data.sendTo} target="_blank">
                     <div className="form-group">
                         <label htmlFor="email">{data.emailLabel}</label>
                         <input type="email" required className="form-control" name="email" id="email" 
@@ -102,7 +106,7 @@ class ContactForm extends React.Component {
                         onChange={this.handleUserInput}
                         placeholder={data.messagePlaceholder}/>
                     </div>
-                    <button type="submit"name="submit" className="btn btn-important" disabled={!this.state.formValid}>{data.buttonText}</button>
+                    <button type="submit"name="submit"  className="btn btn-important" onClick={this.handleSubmit()} disabled={!this.state.formValid}>{data.buttonText}</button>
                 </form>
             </div>
         )
