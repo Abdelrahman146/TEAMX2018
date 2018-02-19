@@ -7,7 +7,7 @@ import LazyLoad from 'react-lazyload'
 import styled from "styled-components";
 
 //components
-import PageHeader from '../components/PageHeader'
+import PHeader from '../components/PHeader'
 import Footer from '../components/Footer'
 import TitleBox from '../components/TitleBox'
 import Headline from '../components/Headline'
@@ -49,7 +49,7 @@ class About extends React.Component {
                 <title>{layout.title} | {page.frontmatter.title_ar}</title>
             </Helmet>
             <div className="content">
-            <PageHeader
+            <PHeader
             language="English"
             logo={layout.logo}
             menu={layout.menu}

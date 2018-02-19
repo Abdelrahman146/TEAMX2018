@@ -8,7 +8,7 @@ import styled from "styled-components";
 import GoogleMap from 'google-map-react'
 
 //components
-import PageHeader from '../components/PageHeader'
+import PHeader from '../components/PHeader'
 import Footer from '../components/Footer'
 import TitleBox from '../components/TitleBox'
 import ContactForm from '../components/ContactForm'
@@ -54,7 +54,7 @@ class Contact extends React.Component {
                 <title>{layout.title} | {page.frontmatter.title_ar}</title>
             </Helmet>
             <div className="content">
-            <PageHeader
+            <PHeader
             language="English"
             logo={layout.logo}
             menu={layout.menu}

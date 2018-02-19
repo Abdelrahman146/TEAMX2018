@@ -4,7 +4,7 @@ import Link from 'gatsby-link'
 
 
 
-class PageHeader extends React.Component {
+class PHeader extends React.Component {
     constructor(props) {
         super(props)
     }
@@ -21,7 +21,7 @@ class PageHeader extends React.Component {
         
         return(
             <div className="header">
-            {/* <nav className="navbar navbar-expand-md navbar-dark">
+            <nav className="navbar navbar-expand-md navbar-dark">
                 <Link className="navbar-brand" to={data.language == "العربية" ? "/en/" : "/ar/"}>
                     <img src={data.logo} alt="teamx logo"/>
                 </Link>
@@ -42,11 +42,11 @@ class PageHeader extends React.Component {
                     </span>
                 </div>
                 
-            </nav> */}
+            </nav>
         </div>
         )
     }
 }
 
 
-export default PageHeader
+export default PHeader

@@ -4,7 +4,7 @@ import Helmet from 'react-helmet'
 import styled from "styled-components";
 
 //components
-import PageHeader from '../components/PageHeader'
+import PHeader from '../components/PHeader'
 import Footer from '../components/Footer'
 import TitleBox from '../components/TitleBox'
 import Section from '../components/Section'
@@ -67,7 +67,7 @@ class About extends React.Component {
                 <title>{layout.title} | {page.frontmatter.title_en}</title>
             </Helmet>
             <div className="content">
-            <PageHeader
+            <PHeader
             language="العربية"
             logo={layout.logo}
             menu={layout.menu}

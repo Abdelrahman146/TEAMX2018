@@ -10,7 +10,7 @@ import Section from '../components/Section'
 import Headline from '../components/Headline'
 import Card from '../components/Card'
 //components
-import PageHeader from '../components/PageHeader'
+import PHeader from '../components/PHeader'
 
 import abdel from '../images/team/abdel.jpg'
 import member1 from '../images/team/member1.jpg'
@@ -67,7 +67,7 @@ class About extends React.Component {
                 <title>{layout.title} | {page.frontmatter.title_ar}</title>
             </Helmet>
             <div className="content">
-            <PageHeader
+            <PHeader
             language="English"
             logo={layout.logo}
             menu={layout.menu}
