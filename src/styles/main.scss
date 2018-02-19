@@ -65,6 +65,17 @@ body {
   height: 100%;
   width: 100%;
   -webkit-font-smoothing: antialiased;
+    
+}
+
+::-moz-selection { /* Code for Firefox */
+  color: $white;
+  background: lighten($pink,8);
+}
+
+::selection {
+  color: $white;
+  background: lighten($pink,8);
 }
 
 p {

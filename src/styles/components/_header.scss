@@ -24,6 +24,13 @@
                 .nav-link{
                     text-align: center;
                     color: $white;
+                    text-transform: uppercase;
+                    &:hover{
+                        color: $orange;
+                    }
+                }
+                .active {
+                    border-bottom: 3px $white solid;
                 }
             }
         }
@@ -48,11 +55,13 @@
                 animation: fadein 1s;
                 .langButton {
                     border-radius: 0;
+                    padding: 8px 0px;
                 }
                 .nav-item {
                     
                     .nav-link{
                         text-align: center;
+                        display: block;
                     }
                     &:active {
                         background: linear-gradient(90deg, lighten($pink,6), transparent);
