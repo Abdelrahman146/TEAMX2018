@@ -27,22 +27,14 @@ class Template extends React.Component {
       title: this.props.data.site.siteMetadata.title_ar,
       title: 'logo',
       logo: logo,
-      about: {
-        text: 'من نحن',
-        link: '/ar/about',
-      },
-      contact: {
-        text: 'تواصل معنا',
-        link: '/ar/contact',
-      },
-      services: {
-        text: 'خدماتنا',
-        link: '/ar/services',
-      },
-      blog: {
-        text: 'المدونة',
-        link: '/ar/blog',
-      },
+      location: this.props.location.pathname,
+      menu: [
+        {text: 'من نحن', link: '/ar/about'},
+        {text: 'تواصل معنا', link: '/ar/contact'},
+        {text: 'خدماتنا', link: '/ar/services'},
+        {text: 'خدماتنا', link: '/ar/services'},
+        {text: 'المدونة', link: '/ar/blog'},
+      ],
       footer: 'قام بتصميم و تطوير هذا الموقع فريق "تيم اكس" - 2018',
       socialMedia: {
         twitter: 'https://twitter.com/TeamXItSolution',

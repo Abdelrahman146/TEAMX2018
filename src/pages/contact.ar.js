@@ -87,6 +87,8 @@ class Contact extends React.Component {
                                 <h1 className="headline">ارسل رسالة</h1>
                                     <ContactForm 
                                     sendTo={page.frontmatter.email}
+                                    currentPath={layout.location}
+                                    redirect="/ar/contact"
                                     emailLabel="البريد الالكتروني"
                                     emailPlaceholder="Example@domain.com"
                                     nameLabel="الإسم"

@@ -28,22 +28,13 @@ class Template extends React.Component {
       lang: 'en',
       title: this.props.data.site.siteMetadata.title_en,
       logo: logo,
-      about: {
-        text: 'About us',
-        link: '/en/about',
-      },
-      contact: {
-        text: 'Contact us',
-        link: '/en/contact',
-      },
-      services: {
-        text: 'Services',
-        link: '/en/services',
-      },
-      blog: {
-        text: 'Blog',
-        link: '/en/blog',
-      },
+      location: this.props.location.pathname,
+      menu: [
+        {text: 'About us', link: '/en/about'},
+        {text: 'Contact us', link: '/en/contact'},
+        {text: 'Services', link: '/en/services'},
+        {text: 'Blog', link: '/en/blog'},
+      ],
       footer: "This Website is Designed and Developed By TEAMX - 2018",
       socialMedia: {
         twitter: 'https://twitter.com/TeamXItSolution',

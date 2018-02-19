@@ -55,10 +55,6 @@ class ContactForm extends React.Component {
     errorClass(error) {
         return(error.length === 0 ? '' : 'has-error');
     }
-
-    handleSubmit() {
-
-    }
     
 
     render() {
@@ -106,7 +102,9 @@ class ContactForm extends React.Component {
                         onChange={this.handleUserInput}
                         placeholder={data.messagePlaceholder}/>
                     </div>
-                    <button type="submit"name="submit"  className="btn btn-important" onClick={this.handleSubmit()} disabled={!this.state.formValid}>{data.buttonText}</button>
+                    <button type="submit" className="btn btn-important"  
+                    onClick={ () => navigateTo(data.redirect)}
+                    disabled={!this.state.formValid}>{data.buttonText}</button>
                 </form>
             </div>
         )
