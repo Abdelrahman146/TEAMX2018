@@ -4,7 +4,7 @@ import Helmet from 'react-helmet'
 import styled from "styled-components";
 
 //components
-import Header from '../components/Header'
+import PageHeader from '../components/PageHeader'
 import Footer from '../components/Footer'
 import TitleBox from '../components/TitleBox'
 import Section from '../components/Section'
@@ -66,9 +66,10 @@ class About extends React.Component {
                 <title>{layout.title} | {page.frontmatter.title_ar}</title>
             </Helmet>
             <div className="content">
-            <Header
+            <PageHeader
             language="English"
             logo={layout.logo}
+            menu={layout.menu}
             />
             <div className="container-fluid">
                 <TitleBox
@@ -102,7 +103,7 @@ class About extends React.Component {
                                     color="purple"
                                     image= "flag"
                                     image_type= "icon"
-                                    header= {<h3>مهمتنا</h3>}
+                                    header= {<h3>الرسالة</h3>}
                                     text= {<p>{page.frontmatter.mission_ar}</p>}
                                     />
                                 </div>

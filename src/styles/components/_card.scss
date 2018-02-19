@@ -1,0 +1,47 @@
+.card-group, .card-deck {
+    .card {
+        flex-grow: 1;
+        border-radius: 0;
+        border: none;
+        outline: 1px solid lighten($purple,35);
+        background: linear-gradient(45deg, lighten($purple,45), lighten($purple,49));
+        //padding: 15px;
+        // //max-width: 1700px;
+        //box-shadow: 2px 2px 7px $purple-dark;
+        //border: 1px solid $purple-dark;
+        .card-icon {
+            text-align: center;
+            font-size: 140px;
+            //line-height: 7.5rem;
+            //margin-top: 20px;
+        }
+        .card-header {
+            background-color: transparent;
+            border: none;
+        }
+        .card-body {
+            padding: 0 1.15rem;
+            padding-bottom: 1.15rem;
+        }
+    }
+    
+    .card-purple {
+        background: linear-gradient(45deg, $purple, lighten($purple,6));
+        color: $white;
+        border: none;
+        outline: none;
+        box-shadow: 0px 0px 10px $purple;
+    }
+    
+    .card-pink {
+        background: linear-gradient(45deg, $pink, lighten($pink,6));
+        color: $white;
+        border: none;
+        outline: none;
+        box-shadow: 0px 0px 10px $pink;
+    }
+    
+    .member-card {
+        flex-basis: 20%;
+    }
+}

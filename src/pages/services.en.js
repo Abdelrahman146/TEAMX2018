@@ -7,7 +7,7 @@ import LazyLoad from 'react-lazyload'
 import styled from "styled-components";
 
 //components
-import Header from '../components/Header'
+import PageHeader from '../components/PageHeader'
 import Footer from '../components/Footer'
 import TitleBox from '../components/TitleBox'
 import Headline from '../components/Headline'
@@ -50,9 +50,10 @@ class About extends React.Component {
                 <title>{layout.title} | {page.frontmatter.title_en}</title>
             </Helmet>
             <div className="content">
-            <Header
+            <PageHeader
             language="العربية"
             logo={layout.logo}
+            menu={layout.menu}
             />
             <div className="container-fluid">
             <TitleBox

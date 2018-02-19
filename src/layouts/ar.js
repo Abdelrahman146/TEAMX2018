@@ -32,7 +32,6 @@ class Template extends React.Component {
         {text: 'من نحن', link: '/ar/about'},
         {text: 'تواصل معنا', link: '/ar/contact'},
         {text: 'خدماتنا', link: '/ar/services'},
-        {text: 'خدماتنا', link: '/ar/services'},
         {text: 'المدونة', link: '/ar/blog'},
       ],
       footer: 'قام بتصميم و تطوير هذا الموقع فريق "تيم اكس" - 2018',
