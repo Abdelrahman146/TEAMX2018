@@ -3,13 +3,14 @@ import Link from 'gatsby-link'
 import Helmet from 'react-helmet'
 import styled from "styled-components";
 
-//components
-import PageHeader from '../components/PageHeader'
+
 import Footer from '../components/Footer'
 import TitleBox from '../components/TitleBox'
 import Section from '../components/Section'
 import Headline from '../components/Headline'
 import Card from '../components/Card'
+//components
+import PageHeader from '../components/PageHeader'
 
 import abdel from '../images/team/abdel.jpg'
 import member1 from '../images/team/member1.jpg'
