@@ -25,7 +25,7 @@ class Section extends React.Component {
             background-size:cover;
             background-repeat:no-repeat;
             border-radius: 5px;
-            box-shadow: 0 0px 10px rgba(118, 82, 161, 0.65), 0 0px 50px rgba(204, 78, 156, 0.45);
+            box-shadow: 0 0px 5px rgba(118, 82, 161, 0.65), 0 0px 24px rgba(204, 78, 156, 0.45);
             @media (max-width: 375px) {
                 height:200px;
               }
