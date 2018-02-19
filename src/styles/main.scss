@@ -78,6 +78,24 @@ body {
   background: lighten($pink,8);
 }
 
+
+body::-webkit-scrollbar {
+  width: 1em;
+}
+
+body::-webkit-scrollbar-track {
+  box-shadow: inset 0 0 6px rgba(93, 4, 177, 0.3);
+  background: linear-gradient(132deg, lighten($color: $purple, $amount: 5), lighten($color: $pink, $amount: 5))
+}
+
+body::-webkit-scrollbar-thumb {
+  background: linear-gradient(40deg, $purple-dark, darken($pink, 8));
+  box-shadow: 0 0 6px rgba(93, 4, 177, 0.3);
+  border-radius: 5px;
+  outline: 1px solid $purple-dark;
+}
+
+
 p {
   font-size: 18px;
   line-height: 1.5;
