@@ -60,6 +60,7 @@ class Template extends React.Component {
     return (
       <div>
             <Helmet>
+                <html dir="ltr" lang="en"/>
                 <meta charSet="utf-8" />
             </Helmet>
             {children({...this.props, layoutData})}
