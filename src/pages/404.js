@@ -11,6 +11,7 @@ import Header from '../components/Header'
 import Footer from '../components/Footer'
 import TitleBox from '../components/TitleBox'
 import Menu from '../components/Menu'
+import UndefindPage from '../components/UndefinedPage'
 
 import bg from '../images/404.jpg'
 
@@ -27,21 +28,21 @@ class Index extends React.Component {
             <div>
             <div className="content">
             <Header
-            language="English"
+            language="العربية"
             />
             <Helmet>
+                <meta charSet="utf-8" />
                 <title>{layout.title}</title>
             </Helmet>
             <div className="container-fluid">
             <TitleBox
             pageTitle="404"
-            pageSubtitle="عذرا، هذه الصفحة غير متاحة او تحت الصيانة"
+            pageSubtitle="We are Sorry, this page seems doesn't exist or still under construction"
             pageDescription=""
              />
-            <Menu 
-            lang="ar"
+             <Menu 
+             lang="en"
             />
-            </div>
             <Footer 
             text= {layout.footer}
             twt= {layout.socialMedia.twitter}
@@ -50,6 +51,7 @@ class Index extends React.Component {
             gp= {layout.socialMedia.google_plus}
             ytb= {layout.socialMedia.youtube}
             />
+            </div>
             </div>
             <Cover id="bg"></Cover>
             </div>
