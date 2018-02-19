@@ -19,7 +19,7 @@ class Index extends React.Component {
     render() {
         
         const { data } = this.props
-        const metadata = data.site.siteMetadata
+        const layout = this.props.layoutData
         const Cover = styled.div`
                 background-image: url(${bg});
         `;
@@ -30,23 +30,25 @@ class Index extends React.Component {
             language="English"
             />
             <Helmet>
-                <html dir="rtl" lang="ar"/>
-                <meta charSet="utf-8" />
-                <title>{metadata.title_ar}</title>
+                <title>{layout.title}</title>
             </Helmet>
             <div className="container-fluid">
             <TitleBox
             pageTitle="404"
-            pageSubtitle="We are Sorry, this page seems doesn't exist or still under construction"
             pageSubtitle="عذرا، هذه الصفحة غير متاحة او تحت الصيانة"
             pageDescription=""
              />
-             <Menu 
-             lang="ar"
+            <Menu 
+            lang="ar"
             />
             </div>
             <Footer 
-            lang="ar"
+            text= {layout.footer}
+            twt= {layout.socialMedia.twitter}
+            fb= {layout.socialMedia.facebook}
+            inst= {layout.socialMedia.instagram}
+            gp= {layout.socialMedia.google_plus}
+            ytb= {layout.socialMedia.youtube}
             />
             </div>
             <Cover id="bg"></Cover>
@@ -56,13 +58,3 @@ class Index extends React.Component {
 }
 
 export default Index
-
-export const pageQuery = graphql`
-    query arQuery {
-        site{
-            siteMetadata{
-            title_ar
-            }
-        }
-    }
-`

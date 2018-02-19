@@ -19,7 +19,7 @@ class Index extends React.Component {
     render() {
         
         const { data } = this.props
-        const metadata = data.site.siteMetadata
+        const layout = this.props.layoutData
         const page = data.markdownRemark
         const bg = page.frontmatter.cover == null ? "" : page.frontmatter.cover.childImageSharp.resize.src
         const Cover = styled.div`
@@ -29,7 +29,7 @@ class Index extends React.Component {
             <div>
             <Helmet>
                 <meta charSet="utf-8" />
-                <title>{metadata.title_en} | {page.frontmatter.title_en}</title>
+                <title>{layout.title} | {page.frontmatter.title_en}</title>
             </Helmet>
 
             <div className="content">
@@ -47,7 +47,12 @@ class Index extends React.Component {
             />
             </div>
             <Footer 
-            lang="en"
+            text= {layout.footer}
+            twt= {layout.socialMedia.twitter}
+            fb= {layout.socialMedia.facebook}
+            inst= {layout.socialMedia.instagram}
+            gp= {layout.socialMedia.google_plus}
+            ytb= {layout.socialMedia.youtube}
             />
             </div>
             <Cover id="bg"></Cover>
@@ -61,11 +66,6 @@ export default Index
 
 export const pageQuery = graphql`
     query IndexQuery {
-        site{
-            siteMetadata{
-            title_en
-            }
-        }
         markdownRemark(frontmatter:{slug: {eq:"home"}}){
             frontmatter {
             title_en

@@ -20,7 +20,7 @@ import member2 from '../images/team/member2.jpg'
 class About extends React.Component {
     render() {
         const { data } = this.props
-        const metadata = data.site.siteMetadata
+        const layout = this.props.layoutData
         const page = data.markdownRemark
         const bg = page.frontmatter.cover == null ? "" : page.frontmatter.cover.childImageSharp.resize.src
         const Cover = styled.div`
@@ -64,8 +64,7 @@ class About extends React.Component {
         return (
             <div>
             <Helmet>
-                <meta charSet="utf-8" />
-                <title>{metadata.title_en} | {page.frontmatter.title_en}</title>
+                <title>{layout.title} | {page.frontmatter.title_en}</title>
             </Helmet>
             <div className="content">
             <Header
@@ -181,7 +180,12 @@ class About extends React.Component {
                     </div>
                 </div>
                 <Footer 
-                lang="en"
+                text= {layout.footer}
+                twt= {layout.socialMedia.twitter}
+                fb= {layout.socialMedia.facebook}
+                inst= {layout.socialMedia.instagram}
+                gp= {layout.socialMedia.google_plus}
+                ytb= {layout.socialMedia.youtube}
                 />
             </div>
             <Cover id="bg"></Cover>
@@ -194,11 +198,6 @@ export default About
 
 export const aboutQuery = graphql`
     query AboutQuery {
-        site{
-            siteMetadata{
-            title_en
-            }
-        }
         markdownRemark(frontmatter:{slug: {eq:"about"}}){
             frontmatter {
             title_en

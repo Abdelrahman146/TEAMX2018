@@ -19,7 +19,7 @@ class Index extends React.Component {
     render() {
         
         const { data } = this.props
-        const metadata = data.site.siteMetadata
+        const layout = this.props.layoutData
         const Cover = styled.div`
                 background-image: url(${bg});
         `;
@@ -31,7 +31,7 @@ class Index extends React.Component {
             />
             <Helmet>
                 <meta charSet="utf-8" />
-                <title>{metadata.title_en}</title>
+                <title>{layout.title}</title>
             </Helmet>
             <div className="container-fluid">
             <TitleBox
@@ -44,7 +44,12 @@ class Index extends React.Component {
             />
             </div>
             <Footer 
-            lang="en"
+            text= {layout.footer}
+            twt= {layout.socialMedia.twitter}
+            fb= {layout.socialMedia.facebook}
+            inst= {layout.socialMedia.instagram}
+            gp= {layout.socialMedia.google_plus}
+            ytb= {layout.socialMedia.youtube}
             />
             </div>
             <Cover id="bg"></Cover>
@@ -54,13 +59,3 @@ class Index extends React.Component {
 }
 
 export default Index
-
-export const pageQuery = graphql`
-    query enQuery {
-        site{
-            siteMetadata{
-            title_en
-            }
-        }
-    }
-`

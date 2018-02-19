@@ -11,7 +11,6 @@ import Section from '../components/Section'
 import Headline from '../components/Headline'
 import Card from '../components/Card'
 
-
 import abdel from '../images/team/abdel.jpg'
 import member1 from '../images/team/member1.jpg'
 import member2 from '../images/team/member2.jpg'
@@ -20,7 +19,7 @@ import member2 from '../images/team/member2.jpg'
 class About extends React.Component {
     render() {
         const { data } = this.props
-        const metadata = data.site.siteMetadata
+        const layout = this.props.layoutData
         const page = data.markdownRemark
         const bg = page.frontmatter.cover == null ? "" : page.frontmatter.cover.childImageSharp.resize.src
         const Cover = styled.div`
@@ -64,9 +63,7 @@ class About extends React.Component {
         return (
             <div>
             <Helmet>
-                <html dir="rtl" lang="ar"/>
-                <meta charSet="utf-8" />
-                <title>{metadata.title_ar} | {page.frontmatter.title_ar}</title>
+                <title>{layout.title} | {page.frontmatter.title_ar}</title>
             </Helmet>
             <div className="content">
             <Header
@@ -182,7 +179,12 @@ class About extends React.Component {
                     </div>
                 </div>
                 <Footer 
-                lang="ar"
+                text= {layout.footer}
+                twt= {layout.socialMedia.twitter}
+                fb= {layout.socialMedia.facebook}
+                inst= {layout.socialMedia.instagram}
+                gp= {layout.socialMedia.google_plus}
+                ytb= {layout.socialMedia.youtube}
                 />
             </div>
             <Cover id="bg"></Cover>

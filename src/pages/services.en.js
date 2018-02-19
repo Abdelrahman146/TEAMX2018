@@ -18,7 +18,7 @@ import Section from '../components/Section'
 class About extends React.Component {
     render() {
         const { data } = this.props
-        const metadata = data.site.siteMetadata
+        const layout = this.props.layoutData
         const page = data.service
         const bg = page.frontmatter.cover == null ? "" : page.frontmatter.cover.childImageSharp.resize.src
         const Cover = styled.div`
@@ -47,7 +47,7 @@ class About extends React.Component {
             <div>
             <Helmet>
                 <meta charSet="utf-8" />
-                <title>{metadata.title_en} | {page.frontmatter.title_en}</title>
+                <title>{layout.title} | {page.frontmatter.title_en}</title>
             </Helmet>
             <div className="content">
             <Header
@@ -67,9 +67,14 @@ class About extends React.Component {
             </div>
           </div>
           
-            <Footer 
-            lang="en"
-            />
+          <Footer 
+          text= {layout.footer}
+          twt= {layout.socialMedia.twitter}
+          fb= {layout.socialMedia.facebook}
+          inst= {layout.socialMedia.instagram}
+          gp= {layout.socialMedia.google_plus}
+          ytb= {layout.socialMedia.youtube}
+          />
         </div>
         <Cover id="bg"></Cover>
             </div>
@@ -81,11 +86,6 @@ export default About
 
 export const pageQuery = graphql`
     query ServicesQuery {
-        site{
-            siteMetadata{
-            title_en
-            }
-        }
         service: markdownRemark(frontmatter:{slug: {eq:"services"}}){
             frontmatter {
             title_en

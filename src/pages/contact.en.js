@@ -22,7 +22,7 @@ class Contact extends React.Component {
     render() {
 
         const { data } = this.props
-        const metadata = data.site.siteMetadata
+        const layout = this.props.layoutData
         const page = data.markdownRemark
         const loc = {
             center: {lat: page.frontmatter.location.lat, lng: page.frontmatter.location.lng},
@@ -51,8 +51,7 @@ class Contact extends React.Component {
         return (
             <div>
             <Helmet>
-                <meta charSet="utf-8" />
-                <title>{metadata.title_en} | {page.frontmatter.title_en}</title>
+                <title>{layout.title} | {page.frontmatter.title_en}</title>
             </Helmet>
             <div className="content">
             <Header
@@ -114,9 +113,14 @@ class Contact extends React.Component {
                 </div>
             </div>
           </div>
-        <Footer 
-        lang="en"
-        />
+          <Footer 
+          text= {layout.footer}
+          twt= {layout.socialMedia.twitter}
+          fb= {layout.socialMedia.facebook}
+          inst= {layout.socialMedia.instagram}
+          gp= {layout.socialMedia.google_plus}
+          ytb= {layout.socialMedia.youtube}
+          />
         </div>
         <div id="bg"></div>
             </div>
