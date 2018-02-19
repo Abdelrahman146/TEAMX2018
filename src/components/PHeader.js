@@ -31,8 +31,8 @@ class PHeader extends React.Component {
                 <div className="collapse navbar-collapse justify-content-end" id="navbarNav">
                     <ul className="navbar-nav">
                         {list}
-                        <li className="nav-item btn btn-important langButton">
-                            <Link  to={data.language == "العربية" ? "/ar/" : "/en/"}>
+                        <li className="nav-item">
+                            <Link className="btn btn-important langButton" to={data.language == "العربية" ? "/ar/" : "/en/"}>
                                 {data.language}
                             </Link>
                         </li>
