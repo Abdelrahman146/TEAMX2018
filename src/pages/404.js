@@ -11,7 +11,6 @@ import Header from '../components/Header'
 import Footer from '../components/Footer'
 import TitleBox from '../components/TitleBox'
 import Menu from '../components/Menu'
-import UndefindPage from '../components/UndefinedPage'
 
 import bg from '../images/404.jpg'
 
