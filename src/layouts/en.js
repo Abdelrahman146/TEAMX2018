@@ -31,8 +31,8 @@ class Template extends React.Component {
       location: this.props.location.pathname,
       menu: [
         {text: 'About us', link: '/en/about'},
-        {text: 'Contact us', link: '/en/contact'},
         {text: 'Services', link: '/en/services'},
+        {text: 'Contact us', link: '/en/contact'},
         {text: 'Blog', link: '/en/blog'},
       ],
       footer: "This Website is Designed and Developed By TEAMX - 2018",

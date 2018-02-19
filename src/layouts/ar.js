@@ -30,8 +30,8 @@ class Template extends React.Component {
       location: this.props.location.pathname,
       menu: [
         {text: 'من نحن', link: '/ar/about'},
-        {text: 'تواصل معنا', link: '/ar/contact'},
         {text: 'خدماتنا', link: '/ar/services'},
+        {text: 'تواصل معنا', link: '/ar/contact'},
         {text: 'المدونة', link: '/ar/blog'},
       ],
       footer: 'قام بتصميم و تطوير هذا الموقع فريق "تيم اكس" - 2018',
