@@ -2,12 +2,12 @@
 type: service
 cover: "./cover.jpg"
 title_en: "Mobile Development"
-title_ar: ""
+title_ar: "تطبيقات الموبايل"
 page_title_en: "Mobile Development"
-subtitle_en: ""
-subtitle_ar: ""
+subtitle_en: "Duis a enim placerat, faucibus lectus mollis, consequat mi. Integer id aliquet nisi. "
+subtitle_ar: "هنالك العديد من الأنواع المتوفرة لنصوص لوريم إيبسوم، ولكن الغالبية تم تعديلها بشكل ما عبر إدخال بعض النوادر أو الكلمات العشوائية إلى النص"
 description_en: "Leave behind the traditional business techniques and beat your competitors with smartness and efficacy."
-description_ar: ""
+description_ar: "ترك وراء تقنيات الأعمال التقليدية وفاز المنافسين الخاص بك مع الذكاء والفعالية."
 image: './pic2.jpg'
 imageTransparent: false
 video: "./path/to/video"

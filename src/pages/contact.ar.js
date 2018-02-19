@@ -28,10 +28,10 @@ class Contact extends React.Component {
             center: {lat: page.frontmatter.location.lat, lng: page.frontmatter.location.lng},
             zoom: 15
           };
-        const bg = page.frontmatter.cover == null ? "" : page.frontmatter.cover.childImageSharp.resize.src
-        const Cover = styled.div`
-                background-image: url(${bg});
-        `;
+          const bg = page.frontmatter.cover == null ? "" : page.frontmatter.cover.childImageSharp.resize.src
+          const Cover = styled.div`
+                  background-image: url(${bg});
+          `;
 
         //fetch info
         const infolist = [];
@@ -127,7 +127,7 @@ class Contact extends React.Component {
             ytb= {layout.socialMedia.youtube}
             />
         </div>
-        <div id="bg"></div>
+        <Cover id="bg"></Cover>
             </div>
         )
     }

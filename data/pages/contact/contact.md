@@ -8,8 +8,8 @@ page_title_en: "Contact us"
 page_title_ar: "تواصل معنا"
 subtitle_en: "You are Welcome Anytime"
 subtitle_ar: "نرحب بكم في جميع الاوقات"
-description_en: ""
-description_ar: ""
+description_en: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi dignissim elit et lacinia rutrum. Duis consequat convallis orci, et venenatis eros lobortis non. "
+description_ar: "هناك حقيقة مثبتة منذ زمن طويل وهي أن المحتوى المقروء لصفحة ما سيلهي القارئ عن التركيز على الشكل الخارجي للنص أو شكل توضع الفقرات في الصفحة التي يقرأها."
 email: "abdel@teamx.ae"
 location:
   lat: 24.483539
