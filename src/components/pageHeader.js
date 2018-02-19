@@ -4,7 +4,7 @@ import Link from 'gatsby-link'
 
 
 
-class Header extends React.Component {
+class PageHeader extends React.Component {
     constructor(props) {
         super(props)
     }
@@ -49,4 +49,4 @@ class Header extends React.Component {
 }
 
 
-export default Header
+export default PageHeader
