@@ -15,7 +15,7 @@ class TitleBox extends React.Component {
             <div className="col-sm">
                   <div className="title-box">
                       <div className="inner-box">
-                          <h1 className="title display-3">{data.pageTitle}</h1>
+                          <h1 className="title">{data.pageTitle}</h1>
                           <h4 className="subtitle">{data.pageSubtitle}</h4>
                           <p className="description">{data.pageDescription}</p>
                       </div>

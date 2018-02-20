@@ -1,7 +1,7 @@
 module.exports = {
   siteMetadata: {
     title_en: 'TEAMX IT Solutions',
-    title_ar: 'تيم اكس لخدمات التكنولوجيا',
+    title_ar:'تيم اكس لحلول تكنولوجيا المعلومات',
     description: 'This is teamx website developed by gatsby',
     siteUrl: 'http://www.teamx.ae',
     author: 'Abdel Rahman Harahsheh',
