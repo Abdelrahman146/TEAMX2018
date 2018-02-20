@@ -65,8 +65,6 @@ class Contact extends React.Component {
             pageSubtitle={page.frontmatter.subtitle_ar}
             pageDescription={page.frontmatter.description_ar}
              />
-            <div className="row">
-                <div className="col-sm">
                     <div className="page">
 
                         <div className="map">
@@ -115,8 +113,6 @@ class Contact extends React.Component {
                         </div>
 
                     </div>
-                </div>
-            </div>
           
             <Footer 
             text= {layout.footer}

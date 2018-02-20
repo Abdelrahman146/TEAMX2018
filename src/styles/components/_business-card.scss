@@ -1,0 +1,48 @@
+
+.business-card {
+    border: none;
+    margin: 100px auto;
+    padding: 10px;
+    box-shadow: 0 12px 24px 0 rgba(0,0,0,0.15); 
+    border-radius: 15px;
+    color: $white;
+    .bc-header {
+        border-radius: 15px;
+        background: $white;
+        border: none;
+        background: linear-gradient(-45deg, lighten($red,6), $purple);
+    }
+    .bc-btn {
+        margin: 20px auto;
+    }
+    .bc-info {
+        margin-top: 40px;
+    }
+    .bc-sm {
+        margin-bottom: 0;
+        a {
+            color: $white;
+            font-size: 2rem;
+            &:hover {
+                color: darken($white, 6);
+            }
+        }
+    }
+    .page {
+        box-shadow: none;
+        border-radius: 0;
+
+        .bio {
+            padding: 20px 0;
+            margin: 0;
+            color: $gray-700;
+            background: linear-gradient(lighten($purple,45),$white)
+        }
+    }
+}
+
+@include media-breakpoint-down(sm) {
+    .bc-sm {
+        text-align: center;
+    }
+}
