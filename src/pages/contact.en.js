@@ -87,6 +87,7 @@ class Contact extends React.Component {
                                 <div className="col">
                                 <h1 className="headline">Cotact Form</h1>
                                     <ContactForm 
+                                    lang={layout.lang}
                                     sendTo={page.frontmatter.email}
                                     currentPath={layout.location}
                                     redirect="/en/contact"
@@ -116,7 +117,7 @@ class Contact extends React.Component {
                     </div>
                 </div>
             </div>
-          </div>
+          
           <Footer 
           text= {layout.footer}
           twt= {layout.socialMedia.twitter}
@@ -125,6 +126,7 @@ class Contact extends React.Component {
           gp= {layout.socialMedia.google_plus}
           ytb= {layout.socialMedia.youtube}
           />
+          </div>
         </div>
         <Cover id="bg"></Cover>
             </div>

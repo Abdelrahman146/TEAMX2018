@@ -43,9 +43,10 @@ class Index extends React.Component {
             pageDescription={page.frontmatter.description_ar}
              />
              <Menu 
-             lang="ar"
+             lang={layout.lang}
+             menu={layout.menu}
             />
-            </div>
+            
             <Footer 
             text= {layout.footer}
             twt= {layout.socialMedia.twitter}
@@ -54,6 +55,7 @@ class Index extends React.Component {
             gp= {layout.socialMedia.google_plus}
             ytb= {layout.socialMedia.youtube}
             />
+            </div>
             </div>
             <Cover id="bg"></Cover>
 

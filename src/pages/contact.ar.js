@@ -97,7 +97,7 @@ class Contact extends React.Component {
                                     messageLabel="الرسالة"
                                     messagePlaceholder="اود معرفة المزيد عن فريق تيم اكس"
                                     buttonText="ارسل"
-                                    lang='ar'
+                                    lang={layout.lang}
                                     />
                                 </div>
                             </div>
@@ -117,7 +117,7 @@ class Contact extends React.Component {
                     </div>
                 </div>
             </div>
-          </div>
+          
             <Footer 
             text= {layout.footer}
             twt= {layout.socialMedia.twitter}
@@ -126,6 +126,7 @@ class Contact extends React.Component {
             gp= {layout.socialMedia.google_plus}
             ytb= {layout.socialMedia.youtube}
             />
+            </div>
         </div>
         <Cover id="bg"></Cover>
             </div>

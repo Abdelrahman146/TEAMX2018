@@ -3,18 +3,14 @@ import Link from 'gatsby-link'
 import styled from "styled-components"
 
 
-class ContactForm extends React.Component {
+class Subscribe extends React.Component {
 
     constructor (props) {
         super(props);
         this.state = {
             email: '',
-            name: '',
-            message: '',
             formErrors: {email: '', message: ''},
             emailValid: false,
-            messageValid: false,
-            formValid: false
         }
     }
     
@@ -28,23 +24,17 @@ class ContactForm extends React.Component {
     validateField(fieldName, value) {
         let fieldValidationErrors = this.state.formErrors;
         let emailValid = this.state.emailValid;
-        let messageValid = this.state.messageValid;
 
         switch(fieldName) {
           case 'email':
             emailValid = value.match(/^([\w.%+-]+)@([\w-]+\.)+([\w]{2,})$/i);
             fieldValidationErrors.email = emailValid ? '' : ' is invalid';
             break;
-          case 'message':
-            messageValid = value.length > 10;
-            fieldValidationErrors.name = messageValid ? '': ' is empty or too short';
-            break;
           default:
             break;
         }
         this.setState({ formErrors: fieldValidationErrors,
                         emailValid: emailValid,
-                        messageValid: messageValid
                       }, this.validateForm);
     }
     
@@ -74,37 +64,23 @@ class ContactForm extends React.Component {
                 </div> 
         )
         return(
-            <div className={"form form-primary-" + data.lang}>
+            <div className={"mb-5 form form-header form-header-" + data.lang}>
                 <div className="panel panel-default validation-panel">
                     <RenderErrors errors={this.state.formErrors} />
                 </div>
-                <form method="POST" action={"https://formspree.io/" + data.sendTo} target="_blank">
-                    <div className="form-group">
-                        <label htmlFor="email">{data.emailLabel}</label>
+                <form className="form-inline" method="POST" action={"https://formspree.io/" + data.sendTo} target="_blank">
+                    <div class="input-group">
                         <input type="email" required className="form-control" name="email" id="email" 
                         placeholder={data.emailPlaceholder}
                         value={this.state.email}
                         onChange={this.handleUserInput}
                         />
+                        <input type="hidden" name="Purpose" value="I would like to subscribe to TEAMX blog" />
+                        <div class="input-group-append">
+                            <button type="submit" className="btn inline-form-button"  
+                            onClick={ () => navigateTo(data.redirect)}>{data.buttonText}</button>
+                        </div>
                     </div>
-                    <br/>
-                    <div className="form-group">
-                        <label htmlFor="name">{data.nameLabel}</label>
-                        <input type="text" className="form-control" name="name" id="name" 
-                        value={this.state.name}
-                        onChange={this.handleUserInput}
-                        placeholder={data.namePlaceholder}/>
-                    </div>
-                    <div className="form-group">
-                        <label htmlFor="message">{data.messageLabel}</label>
-                        <textarea className="form-control" id="message" name="message" 
-                        value={this.state.message}
-                        onChange={this.handleUserInput}
-                        placeholder={data.messagePlaceholder}/>
-                    </div>
-                    <button type="submit" className="btn btn-important"  
-                    onClick={ () => navigateTo(data.redirect)}
-                    disabled={!this.state.formValid}>{data.buttonText}</button>
                 </form>
             </div>
         )
@@ -112,4 +88,4 @@ class ContactForm extends React.Component {
 }
 
 
-export default ContactForm
+export default Subscribe

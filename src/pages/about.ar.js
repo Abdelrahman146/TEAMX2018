@@ -180,7 +180,7 @@ class About extends React.Component {
                         
 
                     </div>
-                </div>
+                
                 <Footer 
                 text= {layout.footer}
                 twt= {layout.socialMedia.twitter}
@@ -189,6 +189,7 @@ class About extends React.Component {
                 gp= {layout.socialMedia.google_plus}
                 ytb= {layout.socialMedia.youtube}
                 />
+                </div>
             </div>
             <Cover id="bg"></Cover>
         </div>

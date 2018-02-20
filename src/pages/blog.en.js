@@ -11,8 +11,9 @@ import Header from '../components/Header'
 import Footer from '../components/Footer'
 import TitleBox from '../components/TitleBox'
 import Menu from '../components/Menu'
+import Subscribe from '../components/Subscribe'
 
-import bg from '../images/404.jpg'
+
 
 class Index extends React.Component {
     
@@ -20,26 +21,39 @@ class Index extends React.Component {
         
         const { data } = this.props
         const layout = this.props.layoutData
+        const page = data.markdownRemark
         const Cover = styled.div`
-                background-image: url(${bg});
+               
         `;
         return (
             <div>
+            <Helmet>
+                <meta charSet="utf-8" />
+                <title>TEAMX Blog</title>
+            </Helmet>
+
             <div className="content">
             <Header
             language="العربية"
             logo={layout.logo}
             />
-            <Helmet>
-                <meta charSet="utf-8" />
-                <title>{layout.title}</title>
-            </Helmet>
             <div className="container-fluid">
             <TitleBox
-            pageTitle="404"
-            pageSubtitle="We are Sorry, this page seems doesn't exist or still under construction"
-            pageDescription=""
+            pageTitle="This is our Future Blog :)"
+            pageSubtitle="Please visit us again soon"
+            pageDescription="we are currently Developing our amazing blog. Please send us your email if you want to be notified when we publish our first post"
              />
+
+             <div className="row">
+             <Subscribe
+             sendTo = {page.frontmatter.email}
+             lang = {layout.lang}
+             emailPlaceholder = "example@domain.com"
+             redirect = "/"
+             buttonText = "SEND"
+             />
+             </div>
+
              <Menu 
              lang={layout.lang}
              menu={layout.menu}
@@ -55,9 +69,20 @@ class Index extends React.Component {
             </div>
             </div>
             <Cover id="bg"></Cover>
+
             </div>
         )
     }
 }
 
 export default Index
+
+export const blogQuery = graphql`
+    query BlogQuery {
+        markdownRemark(frontmatter:{slug: {eq:"contact"}}){
+            frontmatter {
+                email
+            }
+        }
+    }
+`

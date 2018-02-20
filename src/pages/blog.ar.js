@@ -11,43 +11,54 @@ import Header from '../components/Header'
 import Footer from '../components/Footer'
 import TitleBox from '../components/TitleBox'
 import Menu from '../components/Menu'
+import Subscribe from '../components/Subscribe'
 
 
 
-class Index extends React.Component {
+class Blog extends React.Component {
     
     render() {
         
         const { data } = this.props
         const layout = this.props.layoutData
         const page = data.markdownRemark
-        const bg = page.frontmatter.cover == null ? "" : page.frontmatter.cover.childImageSharp.resize.src
         const Cover = styled.div`
-                background-image: url(${bg});
+               
         `;
         return (
             <div>
             <Helmet>
                 <meta charSet="utf-8" />
-                <title>{layout.title} | {page.frontmatter.title_en}</title>
+                <title>مدونة تيم إكس</title>
             </Helmet>
 
             <div className="content">
             <Header
-            language="العربية"
+            language="English"
             logo={layout.logo}
             />
             <div className="container-fluid">
             <TitleBox
-            pageTitle={page.frontmatter.page_title_en}
-            pageSubtitle={page.frontmatter.subtitle_en}
-            pageDescription={page.frontmatter.description_en}
+            pageTitle="أهلا بمكم في مدونة تيم إكس :)"
+            pageSubtitle="زورونا قريبا"
+            pageDescription="we are currently Developing our amazing blog. Please send us your email if you want to be notified when we publish our first post"
+            pageDescription="حاليا نحن نعمل على تطوير مدونتنا، من فضلك ارسل لنا بريدك الالكتروني اذا كنت تريد ان  نعلمك عن اول مقالة ننشرها"
              />
+
+             <div className="row">
+             <Subscribe
+             sendTo = {page.frontmatter.email}
+             lang = {layout.lang}
+             emailPlaceholder = "example@domain.com"
+             redirect = "/"
+             buttonText = "أرسل"
+             />
+             </div>
+
              <Menu 
              lang={layout.lang}
              menu={layout.menu}
             />
-            
             <Footer 
             text= {layout.footer}
             twt= {layout.socialMedia.twitter}
@@ -65,24 +76,14 @@ class Index extends React.Component {
     }
 }
 
-export default Index
+export default Blog
 
-export const pageQuery = graphql`
-    query IndexQuery {
-        markdownRemark(frontmatter:{slug: {eq:"home"}}){
+export const blogQuery = graphql`
+    query BlogQueryAr {
+        markdownRemark(frontmatter:{slug: {eq:"contact"}}){
             frontmatter {
-            title_en
-            page_title_en
-            subtitle_en
-            description_en
-            cover {
-                childImageSharp {
-                    resize (width: 1920){
-                        src
-                    }
-                }
+                email
             }
-        }
         }
     }
 `

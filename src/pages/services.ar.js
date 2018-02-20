@@ -66,7 +66,7 @@ class About extends React.Component {
                     {serviceslist}
                 </div>
             </div>
-          </div>
+          
           
           <Footer 
           text= {layout.footer}
@@ -76,6 +76,7 @@ class About extends React.Component {
           gp= {layout.socialMedia.google_plus}
           ytb= {layout.socialMedia.youtube}
           />
+          </div>
         </div>
         <Cover id="bg"></Cover>
             </div>
