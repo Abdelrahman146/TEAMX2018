@@ -23,6 +23,12 @@
         .list-unstyled {
             padding: 0;
         }
+        .list-inline {
+            padding: 0;
+            .list-inline-item {
+                margin: 0;
+            }
+        }
     }
     .bc-sm {
         margin-bottom: 0;
