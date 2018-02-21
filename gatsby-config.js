@@ -13,12 +13,12 @@ module.exports = {
     {
       resolve: `gatsby-plugin-favicon`,
       options: {
-        logo: "./src/32x32.png",
+        logo: "./src/icon_32x32.png",
         injectHTML: true,
         icons: {
-          android: true,
-          appleIcon: true,
-          appleStartup: true,
+          android: false,
+          appleIcon: false,
+          appleStartup: false,
           coast: false,
           favicons: true,
           firefox: true,
@@ -85,17 +85,17 @@ module.exports = {
         display: 'fullscreen',
         icons: [
           {
-            src: '/img/180x180.png',
+            src: '/img/icon_180x180.png',
             sizes: '180x180',
             type: 'image/png',
           },
           {
-            src: '/img/192x192.png',
+            src: '/img/icon_192x192.png',
             sizes: '192x192',
             type: 'image/png',
           },
           {
-            src: '/img/512x512.png',
+            src: '/img/icon_512x512.png',
             sizes: '512x512',
             type: 'image/png',
           },
