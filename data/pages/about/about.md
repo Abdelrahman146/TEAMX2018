@@ -3,7 +3,7 @@ slug: about
 title_en: "About us"
 title_ar: "من نحن"
 type: page
-wallpaper: ./wallpaper.jpg
+wallpaper: ./wallpaper.png
 page_title_ar: "مـــن نـــحـــن"
 page_title_en: "About us"
 subtitle_ar: "نحن نبني المستقبل"
