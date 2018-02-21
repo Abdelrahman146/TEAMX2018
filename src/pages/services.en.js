@@ -20,8 +20,8 @@ class About extends React.Component {
         const { data } = this.props
         const layout = this.props.layoutData
         const page = data.service
-        const bg = page.frontmatter.cover == null ? "" : page.frontmatter.cover.childImageSharp.resize.src
-        const Cover = styled.div`
+        const bg = page.frontmatter.wallpaper == null ? "" : page.frontmatter.wallpaper.childImageSharp.resize.src
+        const Wallpaper = styled.div`
                 background-image: url(${bg});
         `;
         const services = data.services.edges
@@ -79,7 +79,7 @@ class About extends React.Component {
           />
           </div>
         </div>
-        <Cover id="bg"></Cover>
+        <Wallpaper id="bg"></Wallpaper>
             </div>
         )
     }
@@ -96,7 +96,7 @@ export const pageQuery = graphql`
             subtitle_en
             description_en
             services_title_en
-            cover {
+            wallpaper {
                 childImageSharp {
                     resize (width: 1920){
                         src

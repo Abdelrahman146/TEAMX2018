@@ -20,7 +20,7 @@ class Index extends React.Component {
         
         const { data } = this.props
         const layout = this.props.layoutData
-        const Cover = styled.div`
+        const Wallpaper = styled.div`
                 background-image: url(${bg});
         `;
         return (
@@ -54,7 +54,7 @@ class Index extends React.Component {
             />
             </div>
             </div>
-            <Cover id="bg"></Cover>
+            <Wallpaper id="bg"></Wallpaper>
             </div>
         )
     }

@@ -22,7 +22,7 @@ class Index extends React.Component {
         const { data } = this.props
         const layout = this.props.layoutData
         const page = data.markdownRemark
-        const Cover = styled.div`
+        const Wallpaper = styled.div`
                
         `;
         return (
@@ -68,7 +68,7 @@ class Index extends React.Component {
             />
             </div>
             </div>
-            <Cover id="bg"></Cover>
+            <Wallpaper id="bg"></Wallpaper>
 
             </div>
         )

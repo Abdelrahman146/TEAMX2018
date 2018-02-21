@@ -2,21 +2,27 @@
 .business-card {
     border: none;
     margin: 100px auto;
-    padding: 10px;
+    padding: 5px;
     box-shadow: 0 12px 24px 0 rgba(0,0,0,0.15); 
     border-radius: 15px;
+    outline: none;
     color: $white;
+    background: $white;
     .bc-header {
         border-radius: 15px;
         background: $white;
         border: none;
         background: linear-gradient(-45deg, lighten($red,6), $purple);
+        box-shadow: 0px 0px 10px 0 rgba(0,0,0,0.15); 
     }
     .bc-btn {
         margin: 20px auto;
     }
     .bc-info {
         margin-top: 40px;
+        .list-unstyled {
+            padding: 0;
+        }
     }
     .bc-sm {
         margin-bottom: 0;

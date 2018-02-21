@@ -28,8 +28,8 @@ class Contact extends React.Component {
             center: {lat: page.frontmatter.location.lat, lng: page.frontmatter.location.lng},
             zoom: 15
           };
-          const bg = page.frontmatter.cover == null ? "" : page.frontmatter.cover.childImageSharp.resize.src
-          const Cover = styled.div`
+          const bg = page.frontmatter.wallpaper == null ? "" : page.frontmatter.wallpaper.childImageSharp.resize.src
+          const Wallpaper = styled.div`
                   background-image: url(${bg});
           `;
 
@@ -124,7 +124,7 @@ class Contact extends React.Component {
             />
             </div>
         </div>
-        <Cover id="bg"></Cover>
+        <Wallpaper id="bg"></Wallpaper>
             </div>
         )
     }
@@ -151,7 +151,7 @@ export const contactQueryAr = graphql`
                 lat
                 lng
             }
-            cover {
+            wallpaper {
                 childImageSharp {
                     resize (width: 1920){
                         src

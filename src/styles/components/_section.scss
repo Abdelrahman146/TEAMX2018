@@ -15,6 +15,9 @@ section {
         height: 100%;
         width: 100%;
         background-color: transparent;
+        background: none;
+        box-shadow: none;
+        outline: none;
         border: none;
         .card-header {
             background-color: transparent;
@@ -28,6 +31,7 @@ section {
             width: 100%;
         }
         .card-body{
+            background-color: transparent;
             padding: 0;
             padding-bottom: 20px;
             p{

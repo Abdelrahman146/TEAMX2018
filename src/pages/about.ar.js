@@ -21,9 +21,9 @@ class About extends React.Component {
     render() {
         const { data } = this.props
         const layout = this.props.layoutData
-        const page = data.markdownRemark
-        const bg = page.frontmatter.cover == null ? "" : page.frontmatter.cover.childImageSharp.resize.src
-        const Cover = styled.div`
+        const page = data.page
+        const bg = page.frontmatter.wallpaper == null ? "" : page.frontmatter.wallpaper.childImageSharp.resize.src
+        const Wallpaper = styled.div`
                 background-image: url(${bg});
         `;
 
@@ -122,61 +122,28 @@ class About extends React.Component {
                             </div>
                         </div>
                     </div>
-                    
 
                     <div className="row">
                         <div className="col">
                             <div className="page-content">
-                                <h1 className="headline">Our Team</h1>
-                                <div className="card-deck">
-                                    <div className="card member-card">
-                                    <img class="card-img-top personal-img" src={abdel} alt="Card image cap"/>
-                                        <div className="card-body text-center">
-                                        <h4 class="card-title">Abdel Rahman</h4>
-                                        <div className="card-text">
-                                        <p className="text-muted">
-                                            <strong>Web Developer</strong>
-                                        </p>
-                                        </div>
-                                        
-                                        </div>
-                                        <div className="card-footer">
-                                        <Link className="btn btn-primary btn-block" href="#">Info</Link>
-                                        </div>
+                                <Headline title={layout.lang == 'en' ? "Our Team" : "الفريق"}/>
+                                <div className="row">
+                                {data.team.edges.map(({node}) => (
+                                    <div className="col-sm-4">
+                                        <Card 
+                                        color= ""
+                                        image= {node.frontmatter.image.childImageSharp.resize.src}
+                                        image_type= "img"
+                                        header= {<h4>{node.frontmatter.name}</h4>}
+                                        text= {<p>{node.frontmatter.role}</p>}
+                                        footer={<Link className="btn btn-primary" to={node.frontmatter.path}>بطاقة العمل</Link>}
+                                        />
                                     </div>
-                                    <div className="card member-card">
-                                    <img class="card-img-top personal-img" src={member2} alt="Card image cap"/>
-                                        <div className="card-body text-center">
-                                        <h4 class="card-title">Member Name</h4>
-                                        <div className="card-text">
-                                        <p className="text-muted">
-                                            <strong>Member Position</strong>
-                                        </p>
-                                        </div>
-                                        </div>
-                                        <div className="card-footer">
-                                        <Link className="btn btn-primary btn-block" href="#">Info</Link>
-                                        </div>
-                                    </div>
-                                    <div className="card member-card">
-                                    <img class="personal-img" src={member1} alt="Card image cap"/>
-                                        <div className="card-body text-center">
-                                        <h4 class="card-title">Member name</h4>
-                                        <div className="card-text">
-                                        <p className="text-muted">
-                                            <strong>Member position</strong>
-                                        </p>
-                                        </div>
-                                        </div>
-                                        <div className="card-footer">
-                                        <Link className="btn btn-primary btn-block" href="#">Info</Link>
-                                        </div>
-                                    </div>
+                                ))}
                                 </div>
                             </div>
                         </div>
                     </div>
-
                         
 
                     </div>
@@ -191,7 +158,7 @@ class About extends React.Component {
                 />
                 </div>
             </div>
-            <Cover id="bg"></Cover>
+            <Wallpaper id="bg"></Wallpaper>
         </div>
         )
     }
@@ -206,7 +173,7 @@ export const aboutQuery = graphql`
             title_ar
             }
         }
-        markdownRemark(frontmatter:{slug: {eq:"about"}}){
+        page: markdownRemark(frontmatter:{slug: {eq:"about"}}){
             frontmatter {
             title_ar
             page_title_ar
@@ -216,7 +183,7 @@ export const aboutQuery = graphql`
             mission_ar
             sections_title_ar
             features_title_ar
-            cover {
+            wallpaper {
                 childImageSharp {
                     resize (width: 1920){
                         src
@@ -244,5 +211,28 @@ export const aboutQuery = graphql`
             }
         }
         }
+        team: allMarkdownRemark(filter: {
+              frontmatter: {
+                type: { eq: "member"},
+                langKey:{ eq: "ar"}
+              },
+            }) {
+              edges {
+                node {
+                  frontmatter {
+                    path
+                    role
+                    name
+                    image {
+                        childImageSharp {
+                            resize (width: 500){
+                                src
+                            }
+                        }
+                    }
+                  }
+                }
+              }
+            }
     }
 `

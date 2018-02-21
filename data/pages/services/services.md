@@ -3,7 +3,7 @@ title_en: "Services"
 title_ar: "خدماتنا"
 slug: "services"
 type: page
-cover: "./cover.jpg"
+wallpaper: ./wallpaper.jpg
 page_title_en: "Our Services"
 page_title_ar: "خدماتنا"
 subtitle_en: ". Aliquam ut orci sollicitudin, porta urna at, consectetur diam. "
