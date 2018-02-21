@@ -11,6 +11,24 @@ module.exports = {
   pathPrefix: '/',
   plugins: [
     {
+      resolve: `gatsby-plugin-favicon`,
+      options: {
+        logo: "./src/32x32.png",
+        injectHTML: true,
+        icons: {
+          android: true,
+          appleIcon: true,
+          appleStartup: true,
+          coast: false,
+          favicons: true,
+          firefox: true,
+          twitter: false,
+          yandex: false,
+          windows: false
+        }
+      }
+    },
+    {
       resolve: 'gatsby-source-filesystem',
       options: {
         path: `${__dirname}/data/`,
@@ -62,17 +80,22 @@ module.exports = {
         name: 'TEAMX IT Solutions',
         short_name: 'TEAMX',
         start_url: '/',
-        background_color: '#fff',
-        theme_color: '#673ab7',
-        display: 'minimal-ui',
+        background_color: '#F5F8FB',
+        theme_color: '#6E48AA',
+        display: 'fullscreen',
         icons: [
           {
-            src: '/img/android-chrome-192x192.png',
+            src: '/img/180x180.png',
+            sizes: '180x180',
+            type: 'image/png',
+          },
+          {
+            src: '/img/192x192.png',
             sizes: '192x192',
             type: 'image/png',
           },
           {
-            src: '/img/android-chrome-512x512.png',
+            src: '/img/512x512.png',
             sizes: '512x512',
             type: 'image/png',
           },
@@ -93,6 +116,7 @@ module.exports = {
     'gatsby-plugin-sass',
     'gatsby-plugin-sharp',
     'gatsby-transformer-sharp',
+    'gatsby-plugin-fastclick',
     'gatsby-plugin-styled-components',
     {
       resolve: 'gatsby-plugin-i18n',
@@ -101,6 +125,15 @@ module.exports = {
         useLangKeyLayout: true,
         langKeyForNull: 'en',
       }
+    },
+    {
+      resolve: `gatsby-plugin-nprogress`,
+      options: {
+        // Setting a color is optional.
+        color: `#6E48AA`,
+        // Disable the loading spinner.
+        showSpinner: true,
+      },
     },
   ],
 }
