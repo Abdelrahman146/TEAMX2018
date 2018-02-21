@@ -116,7 +116,6 @@ module.exports = {
     'gatsby-plugin-sass',
     'gatsby-plugin-sharp',
     'gatsby-transformer-sharp',
-    'gatsby-plugin-fastclick',
     'gatsby-plugin-styled-components',
     {
       resolve: 'gatsby-plugin-i18n',
