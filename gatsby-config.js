@@ -73,7 +73,6 @@ module.exports = {
         ],
       },
     },
-    
     {
       resolve: `gatsby-plugin-manifest`,
       options: {
@@ -101,6 +100,16 @@ module.exports = {
           },
         ],
       },
+    },
+    {
+      resolve: `gatsby-plugin-google-fonts`,
+      options: {
+        fonts: [
+          `Quicksand`,
+          `Mada`,
+          `source sans pro` // you can also specify font weights and styles
+        ]
+      }
     },
     {
       resolve: 'gatsby-plugin-google-analytics',
