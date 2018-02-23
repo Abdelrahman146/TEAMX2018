@@ -1,7 +1,7 @@
 ---
 slug: contact
 type: page
-wallpaper: ./wallpaper.jpg
+wallpaper: ./wallpaper2.jpg
 title_en: "Contact us"
 title_ar: "تواصل معنا"
 page_title_en: "Contact us"

@@ -1,7 +1,7 @@
 ---
 slug: "home"
 type: page
-wallpaper: ./wallpaper.jpg
+wallpaper: ./wallpaper2.jpg
 title_en: "Home"
 title_ar: "الصفحة الرئيسية"
 page_title_en: "TEAMX IT Solutions"
