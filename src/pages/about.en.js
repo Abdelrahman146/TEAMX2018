@@ -134,7 +134,7 @@ class About extends React.Component {
                                 <Headline title={layout.lang == 'en' ? "Our Team" : "الفريق"}/>
                                 <div className="row">
                                 {data.team.edges.map(({node}) => (
-                                    <div className="col-sm-4">
+                                    <div className="col-sm-4 mb-3">
                                         <Card 
                                         color= ""
                                         image= {node.frontmatter.image.childImageSharp.resize.src}
