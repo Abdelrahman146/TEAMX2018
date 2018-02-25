@@ -33,7 +33,7 @@ class Card extends React.Component {
         return(
             <div className={"card card-" + data.color}>
                 {img}
-                <div className="text-center">
+                <div className="text-center card-content">
                     <div className="card-header">
                         {data.header}
                     </div>

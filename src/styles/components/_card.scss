@@ -3,6 +3,7 @@
         flex-grow: 1;
         border-radius: 0;
         border: none;
+        //height: 100%;
         outline: 1px solid lighten($purple,35);
         background: linear-gradient(45deg, lighten($purple,45), lighten($purple,49));
         //padding: 15px;
@@ -23,7 +24,32 @@
             padding: 0 1.15rem;
             padding-bottom: 1.15rem;
         }
+        .card-footer {
+            align-self: flex-end;
+            width: 100%;
+        }
         
+        
+    }
+
+    .team-card {
+        .card {
+            height: 100%;
+            .card-content {
+                display: flex;
+                flex-direction: column;
+                height: 100%;
+                .card-header {
+                }
+                .card-body {
+                }
+                .card-footer {
+                    align-self: flex-end;
+                    width: 100%;
+                }
+            }
+        }
+
     }
     
     .card-purple {
