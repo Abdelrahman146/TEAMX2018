@@ -3,11 +3,11 @@ type: service
 wallpaper: ./wallpaper.jpg
 title_en: "Web Solutions"
 title_ar: "خدمات الويب"
-page_title_en: "Virtual World"
-page_title_ar: "العالم الافتراضي"
-subtitle_en: "Experience The Virtual Life"
-subtitle_ar: "تمتع بتجربة العالم الإفتراضي"
-description_en: "The world became a small village and the need to digitalize your services is a must to cope with the changing in the world."
+page_title_en: "Li"
+page_title_ar: "" 
+subtitle_en: "Experience The new Web Technologies"
+subtitle_ar: "عش تجربة تكنولوجياالويب الحديثة"
+description_en: ""
 description_ar: "العالم أصبح الأن قرية صغيرة لذا أتمتت الخدمات باتت من الأمور المهمة لمواكبة التحديات في العالم."
 image: ./pic2.jpeg
 imageTransparent: false

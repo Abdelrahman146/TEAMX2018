@@ -23,8 +23,8 @@ sections:
     imageTransparent: true
     button_text_en: "Ask"
     button_text_ar: "اسأل"
-    button_link_en: /ar/contact
-    button_link_ar: /en/contact
+    button_link_en: /en/contact
+    button_link_ar: /ar/contact
     description_en: "We are the “TeamX”!! we provide  the most advance  and promising Web Development, IT Security, SEO (Search Engine Optimization), Social Media Marketing, Hosting and Domain Registration solutions and more to  fulfil your virtual needs in this age of technology in UAE and to any one in the world. Our aim is to become the one of Leaders in IT Industry and to provide the best IT solutions in the UAE market. We are the IT professionals, we are most Experience IT Team. We are here to create the best IT Solutions. We are technology experts. We are TeamX"
     description_ar: "فريق تيم إكس يقدم الحلول التقنية في دولة الإمارات العربية المتحدة. نحن نفتخر في خدمتكم و تقديكم الأفضل في مجال التقنية. فريق تيم إكس متخصص في تطوير وبرمجة المواقع الإلكترونية، تطوير وبرمجة تطبيقات الهواتف الذكية، حلول أمن المعلومات و حلول الاستضافة وتسجيل نطاقات مواقع الإنترنت وغيرها من الخدمات التي ستضمن تقدم اعمالكم و نجاحها، للمزيد تواصلوا معنا الان!!"
   - title_en: "TEAMX?"

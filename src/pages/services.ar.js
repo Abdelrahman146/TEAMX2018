@@ -12,7 +12,7 @@ import Footer from '../components/Footer'
 import TitleBox from '../components/TitleBox'
 import Headline from '../components/Headline'
 import Section from '../components/Section'
-
+import Card from '../components/Card'
 
 
 class About extends React.Component {
@@ -43,6 +43,19 @@ class About extends React.Component {
             )
           }
         )
+        //fetch info
+        const featureslist = [];
+        page.frontmatter.features.forEach(feature => {
+            featureslist.push(
+              <Card 
+              color= "purple"
+              image= {feature.icon}
+              image_type= "icon"
+              header= {<h4>{feature.title_ar}</h4>}
+              />
+            )
+          }
+        )
         return (
             <div>
             <Helmet>
@@ -61,6 +74,17 @@ class About extends React.Component {
             pageDescription={page.frontmatter.description_ar}
              />
             <div className="page">
+                <div className="row">
+                    <div className="col">
+                        <div className="page-content">
+                            <Headline title={page.frontmatter.features_title_ar}/>
+                            <div className="card-deck">
+                                {featureslist}
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <br/> 
                 <div className="page-content">
                     <Headline title={page.frontmatter.services_title_ar} />
                     {serviceslist}
@@ -95,6 +119,11 @@ export const pageQuery = graphql`
             subtitle_ar
             description_ar
             services_title_ar
+            features_title_ar
+            features {
+                title_ar
+                icon
+            }
             wallpaper {
                 childImageSharp {
                     resize (width: 1920){
