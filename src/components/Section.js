@@ -1,7 +1,6 @@
 import React from 'react'
 import Link from 'gatsby-link'
 import styled from "styled-components"
-import Fade from 'react-reveal/Fade';
 
 
 class Section extends React.Component {
@@ -52,14 +51,11 @@ class Section extends React.Component {
             <section key={data.key}>
 
                 <div className="row">
-                    <Fade delay={1500} top duration={1000}>
                         <div className={data.order % 2 == 0 ? 'col-sm-5 align-middle' : 'col-sm-5 align-middle order-sm-2'}>
                             <div className="section-image">
                                 {image}
                             </div>
                         </div>
-                    </Fade>
-                    <Fade bottom delay={1750} duration={1000}>
                         <div className={data.order % 2 == 0 ? 'col-sm-7 align-middle' : 'col-sm-7 align-middle order-sm-1'}>
                             <div className="card section-content">
                                 <div className="card-header">
@@ -73,7 +69,6 @@ class Section extends React.Component {
                                 {button}
                             </div>
                         </div>
-                    </Fade>
                 </div>
             </section>
         )

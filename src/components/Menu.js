@@ -1,6 +1,5 @@
 import React from 'react'
 import Link from 'gatsby-link'
-import Zoom from 'react-reveal/Zoom';
 
 
 class TitleBox extends React.Component {
@@ -18,7 +17,6 @@ class TitleBox extends React.Component {
         );
         
         return(
-            <Zoom delay={1500} duration={1500}>
             <div className="row">
             <div className="col-sm">
                 <div className="title-box">
@@ -30,7 +28,6 @@ class TitleBox extends React.Component {
                   </div>
             </div>
           </div>
-            </Zoom>
         )
     }
 }

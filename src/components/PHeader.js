@@ -1,8 +1,5 @@
 import React from 'react'
 import Link from 'gatsby-link'
-import Slide from 'react-reveal/Slide'
-import Zoom from 'react-reveal/Zoom';
-
 
 
 class PHeader extends React.Component {
@@ -23,11 +20,9 @@ class PHeader extends React.Component {
         return(
             <div className="header">
             <nav className="navbar navbar-expand-md navbar-dark">
-                <Zoom delay={500}>
                     <Link className="navbar-brand" to={data.language == "العربية" ? "/en/" : "/ar/"}>
                         <img src={data.logo} alt="teamx logo"/>
                     </Link>
-                </Zoom>
                 <button className="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                     <span className="navbar-toggler-icon"></span>
                 </button>

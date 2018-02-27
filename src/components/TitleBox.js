@@ -1,6 +1,5 @@
 import React from 'react'
 import Link from 'gatsby-link'
-import Fade from 'react-reveal/Fade'
 
 
 class TitleBox extends React.Component {
@@ -15,11 +14,9 @@ class TitleBox extends React.Component {
             <div className="col-sm">
                   <div className="title-box">
                       <div className="inner-box">
-                          <Fade top delay={1000}>
                             <h1 className="title">{data.pageTitle}</h1>
                             <h4 className="subtitle">{data.pageSubtitle}</h4>
                             <p className="description">{data.pageDescription}</p>
-                          </Fade>
                       </div>
                   </div>
             </div>
