@@ -8,8 +8,6 @@ subtitle_en: "Duis a enim placerat, faucibus lectus mollis, consequat mi. Intege
 subtitle_ar: "هنالك العديد من الأنواع المتوفرة لنصوص لوريم إيبسوم، ولكن الغالبية تم تعديلها بشكل ما عبر إدخال بعض النوادر أو الكلمات العشوائية إلى النص"
 description_en: "Leave behind the traditional business techniques and beat your competitors with smartness and efficacy."
 description_ar: "ترك وراء تقنيات الأعمال التقليدية وفاز المنافسين الخاص بك مع الذكاء والفعالية."
-summary_en: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. In facilisis vulputate risus, id feugiat est. Phasellus lobortis eros at justo tincidunt blandit. Morbi rhoncus, lectus et dapibus egestas, augue leo hendrerit ligula, at sollicitudin erat nibh sollicitudin elit. Ut at ipsum odio. Fusce lacinia suscipit ligula eget dictum."
-summary_ar: "كما نعلم ان العالم متجه نحو الحياة الافتراضية او العالم الإفتراضي، فريق تيم إكس قرر وضع استراتيجيات تضمن لكم نقله نوعية في اعمالكم أو متاجركم وغيرها الى هذا العالم. فريق تيم إكس مستعد في تقديم الأفضل دائما وملتزمون في توفير افضل الحلول الرقمية. فريق تيم إكس يقدم لكم خدمات تصميم وبرمجة مواقع الانترنت، تطوير وبرمجة المتاجر الإلكترونية وغيرها في دولة الإمارات العربية المتحدة."
 image: ./pic2.jpg
 imageTransparent: false
 video: ./path/to/video
