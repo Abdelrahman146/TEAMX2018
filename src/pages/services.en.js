@@ -35,9 +35,7 @@ class About extends React.Component {
               title={service.title_en}
               image={image}
               imageTransparent= {service.imageTransparent}
-              description={service.description_en}
-              btn_text="Read More"
-              btn_link="/"
+              description={service.summary_en}
               order= {i++}
               />
             )
@@ -135,12 +133,12 @@ export const pageQuery = graphql`
             }
             html
         }
-        services: allMarkdownRemark(filter: {frontmatter: { type: { eq: "service"}}}){
+        services: allMarkdownRemark(sort: {fields: [id], order: DESC}, filter: {frontmatter: {type: {eq: "service"}}}) {
             edges {
             node{
                 frontmatter{
                 title_en
-                description_en
+                summary_en
                 image {
                     childImageSharp {
                         resize (width: 500){
