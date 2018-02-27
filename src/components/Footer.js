@@ -13,7 +13,7 @@ class Footer extends React.Component {
         const data = this.props
 
         return(
-            <Fade bottom>
+            <Fade delay={1700}>
             <div className="footer text-center">
                 
                 <ul className="socialMedia">

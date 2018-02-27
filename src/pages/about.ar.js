@@ -2,9 +2,6 @@ import React from 'react'
 import Link from 'gatsby-link'
 import Helmet from 'react-helmet'
 import styled from "styled-components";
-import Fade from 'react-reveal/Fade';
-import Zoom from 'react-reveal/Zoom';
-import Slide from 'react-reveal/Slide';
 
 import Footer from '../components/Footer'
 import TitleBox from '../components/TitleBox'
@@ -121,8 +118,8 @@ class About extends React.Component {
                             </div>
                         </div>
                     </div>
-
-                    <div className="row">
+                    <br/>
+                    {/* <div className="row">
                         <div className="col">
                             <div className="page-content">
                                 <Headline title={layout.lang == 'en' ? "Our Team" : "الفريق"}/>
@@ -142,7 +139,7 @@ class About extends React.Component {
                                 </div>
                             </div>
                         </div>
-                    </div>
+                    </div> */}
                         
 
                     </div>

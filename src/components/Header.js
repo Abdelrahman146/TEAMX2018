@@ -16,7 +16,7 @@ class Header extends React.Component {
         return(
             <div className="header">
             <nav className="navbar navbar-light">
-                <Zoom>
+                <Zoom delay={500}>
                     <Link className="navbar-brand" to={data.language == "العربية" ? "/en/" : "/ar/"}>
                         <img src={data.logo} alt="teamx logo"/>
                     </Link>

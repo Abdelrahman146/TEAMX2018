@@ -127,8 +127,8 @@ class About extends React.Component {
                             </div>
                         </div>
                     </div>
-
-                    <div className="row">
+                    <br/>
+                    {/* <div className="row">
                         <div className="col">
                             <div className="page-content">
                                 <Headline title={layout.lang == 'en' ? "Our Team" : "الفريق"}/>
@@ -148,7 +148,7 @@ class About extends React.Component {
                                 </div>
                             </div>
                         </div>
-                    </div>
+                    </div> */}
 
                         
 
