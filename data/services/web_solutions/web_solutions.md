@@ -9,6 +9,8 @@ subtitle_en: "Experience The new Web Technologies"
 subtitle_ar: "عش تجربة تكنولوجياالويب الحديثة"
 description_en: ""
 description_ar: "العالم أصبح الأن قرية صغيرة لذا أتمتت الخدمات باتت من الأمور المهمة لمواكبة التحديات في العالم."
+summary_en: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. In facilisis vulputate risus, id feugiat est. Phasellus lobortis eros at justo tincidunt blandit. Morbi rhoncus, lectus et dapibus egestas, augue leo hendrerit ligula, at sollicitudin erat nibh sollicitudin elit. Ut at ipsum odio. Fusce lacinia suscipit ligula eget dictum."
+summary_ar: "كما نعلم ان العالم متجه نحو الحياة الافتراضية او العالم الإفتراضي، فريق تيم إكس قرر وضع استراتيجيات تضمن لكم نقله نوعية في اعمالكم أو متاجركم وغيرها الى هذا العالم. فريق تيم إكس مستعد في تقديم الأفضل دائما وملتزمون في توفير افضل الحلول الرقمية. فريق تيم إكس يقدم لكم خدمات تصميم وبرمجة مواقع الانترنت، تطوير وبرمجة المتاجر الإلكترونية وغيرها في دولة الإمارات العربية المتحدة."
 image: ./pic2.jpeg
 imageTransparent: false
 video: ./path/to/video

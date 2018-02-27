@@ -9,6 +9,8 @@ subtitle_en: "We deliver all digital solutions to our customers"
 subtitle_ar: "نحن نوفر جميع الحلول الرقمية لعلائنا"
 description_en: "Digital marketing is the most important strategy to make your business popular"
 description_ar: "التسويق الرقمي يعتبر من اهم العناصر لنجاح المشاريع"
+summary_en: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. In facilisis vulputate risus, id feugiat est. Phasellus lobortis eros at justo tincidunt blandit. Morbi rhoncus, lectus et dapibus egestas, augue leo hendrerit ligula, at sollicitudin erat nibh sollicitudin elit. Ut at ipsum odio. Fusce lacinia suscipit ligula eget dictum."
+summary_ar: "كما نعلم ان العالم متجه نحو الحياة الافتراضية او العالم الإفتراضي، فريق تيم إكس قرر وضع استراتيجيات تضمن لكم نقله نوعية في اعمالكم أو متاجركم وغيرها الى هذا العالم. فريق تيم إكس مستعد في تقديم الأفضل دائما وملتزمون في توفير افضل الحلول الرقمية. فريق تيم إكس يقدم لكم خدمات تصميم وبرمجة مواقع الانترنت، تطوير وبرمجة المتاجر الإلكترونية وغيرها في دولة الإمارات العربية المتحدة."
 image: ./pic3.jpeg
 imageTransparent: false
 video: ./path/to/video

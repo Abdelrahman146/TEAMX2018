@@ -31,15 +31,17 @@ class About extends React.Component {
             service = service.node.frontmatter
             const image = service.image.childImageSharp.resize.src
             serviceslist.push(
-              <Section
-              title={service.title_en}
-              image={image}
-              imageTransparent= {service.imageTransparent}
-              description={service.description_en}
-              btn_text="Read More"
-              btn_link="/"
-              order= {i++}
-              />
+              <div>
+                <Section
+                title={service.title_en}
+                image={image}
+                imageTransparent= {service.imageTransparent}
+                description={service.summary_en}
+                order= {i++}
+                />
+                <br/>
+                <br/>
+              </div>
             )
           }
         )
@@ -140,7 +142,7 @@ export const pageQuery = graphql`
             node{
                 frontmatter{
                 title_en
-                description_en
+                summary_en
                 image {
                     childImageSharp {
                         resize (width: 500){
