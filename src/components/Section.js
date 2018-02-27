@@ -33,44 +33,44 @@ class Section extends React.Component {
 
         let button = null
 
-        if(data.btn_text != null) {
+        if (data.btn_text != null) {
             button = <div className="card-footer">
-                        <Link className="btn btn-primary" to={data.btn_link}>{data.btn_text}</Link>
-                    </div>
-        }else {
+                <Link className="btn btn-primary" to={data.btn_link}>{data.btn_text}</Link>
+            </div>
+        } else {
             button = ""
         }
 
         let image = null
-        if(data.imageTransparent == true) {
-            image = <img src={data.image} alt={data.image_alt}/>
-        }else {
-            image = <Image className="diffused-shadow"/>
+        if (data.imageTransparent == true) {
+            image = <img src={data.image} alt={data.image_alt} />
+        } else {
+            image = <Image className="diffused-shadow" />
         }
 
-        return(
-            <section>
-                
+        return (
+            <section key={data.key}>
+
                 <div className="row">
                     <Fade delay={1500} top duration={1000}>
-                        <div className={data.order%2 == 0 ? 'col-sm-5 align-middle' : 'col-sm-5 align-middle order-sm-2'}>
+                        <div className={data.order % 2 == 0 ? 'col-sm-5 align-middle' : 'col-sm-5 align-middle order-sm-2'}>
                             <div className="section-image">
                                 {image}
                             </div>
                         </div>
                     </Fade>
                     <Fade bottom delay={1750} duration={1000}>
-                        <div className={data.order%2 == 0 ? 'col-sm-7 align-middle' : 'col-sm-7 align-middle order-sm-1'}>
+                        <div className={data.order % 2 == 0 ? 'col-sm-7 align-middle' : 'col-sm-7 align-middle order-sm-1'}>
                             <div className="card section-content">
-                                    <div className="card-header">
-                                        <h2 className="text-center">{data.title}</h2>
-                                    </div>
-                                    <div className="card-body align-middle">
-                                        <p className="">
-                                            {data.description}
-                                        </p>
-                                    </div>
-                                    {button}
+                                <div className="card-header">
+                                    <h2 className="text-center">{data.title}</h2>
+                                </div>
+                                <div className="card-body align-middle">
+                                    <p className="">
+                                        {data.description}
+                                    </p>
+                                </div>
+                                {button}
                             </div>
                         </div>
                     </Fade>

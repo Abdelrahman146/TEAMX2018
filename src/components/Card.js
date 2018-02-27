@@ -32,7 +32,7 @@ class Card extends React.Component {
         }
         return(
             <Fade bottom delay={1500}>
-            <div className={"card card-" + data.color}>
+            <div key={data.key} className={"card card-" + data.color}>
                 {img}
                 <div className="text-center card-content">
                     <div className="card-header">

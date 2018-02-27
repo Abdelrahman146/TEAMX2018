@@ -1,6 +1,5 @@
 
 import React from 'react'
-import Fade from 'react-reveal/Fade'
 
 
 
@@ -13,7 +12,6 @@ class Footer extends React.Component {
         const data = this.props
 
         return(
-            <Fade delay={1700}>
             <div className="footer text-center">
                 
                 <ul className="socialMedia">
@@ -26,7 +24,6 @@ class Footer extends React.Component {
                 
                 <p className="copyright">{data.text}</p>
             </div>
-            </Fade>
         )
     }
 }

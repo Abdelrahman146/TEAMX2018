@@ -36,6 +36,7 @@ class About extends React.Component {
             const image = section.image.childImageSharp.resize.src
             sectionslist.push(
               <Section
+              key={section.title_en}
               title={section.title_en}
               image={image}
               imageTransparent= {section.imageTransparent}
@@ -52,7 +53,8 @@ class About extends React.Component {
         const featureslist = [];
         page.frontmatter.features.forEach(feature => {
             featureslist.push(
-              <Card 
+              <Card
+              key={feature.title_en}
               color= ""
               image= {feature.image}
               image_type= "icon"
@@ -87,7 +89,7 @@ class About extends React.Component {
 
                     <div className="row">
                         <div className="col">
-                            <div class="page-content">
+                            <div className="page-content">
                                 <Headline title={page.frontmatter.sections_title_en}/>
                                 {sectionslist}
                             </div>
