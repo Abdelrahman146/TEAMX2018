@@ -2,19 +2,18 @@ import React from 'react'
 import Link from 'gatsby-link'
 import Helmet from 'react-helmet'
 import styled from "styled-components";
-
+import Fade from 'react-reveal/Fade';
+import Zoom from 'react-reveal/Zoom';
+import Slide from 'react-reveal/Slide';
 
 import Footer from '../components/Footer'
 import TitleBox from '../components/TitleBox'
 import Section from '../components/Section'
 import Headline from '../components/Headline'
 import Card from '../components/Card'
+
 //components
 import PHeader from '../components/PHeader'
-
-import abdel from '../images/team/abdel.jpg'
-import member1 from '../images/team/member1.jpg'
-import member2 from '../images/team/member2.jpg'
 
 
 class About extends React.Component {
@@ -33,15 +32,15 @@ class About extends React.Component {
         page.frontmatter.sections.forEach(section => {
             const image = section.image.childImageSharp.resize.src
             sectionslist.push(
-              <Section
-              title={section.title_ar}
-              image={image}
-              imageTransparent= {section.imageTransparent}
-              description={section.description_ar}
-              btn_text= {section.button_text_ar}
-              btn_link={section.button_link_ar}
-              order= {i++}
-              />
+                <Section
+                title={section.title_ar}
+                image={image}
+                imageTransparent= {section.imageTransparent}
+                description={section.description_ar}
+                btn_text= {section.button_text_ar}
+                btn_link={section.button_link_ar}
+                order= {i++}
+                />
             )
           }
         )
@@ -50,13 +49,13 @@ class About extends React.Component {
         const featureslist = [];
         page.frontmatter.features.forEach(feature => {
             featureslist.push(
-              <Card 
-              color= ""
-              image= {feature.image}
-              image_type= "icon"
-              header= {<h4>{feature.title_ar}</h4>}
-              text= {<p>{feature.description_ar}</p>}
-              />
+                <Card 
+                color= ""
+                image= {feature.image}
+                image_type= "icon"
+                header= {<h4>{feature.title_ar}</h4>}
+                text= {<p>{feature.description_ar}</p>}
+                />
             )
           }
         )
@@ -83,8 +82,8 @@ class About extends React.Component {
                     <div className="row">
                         <div className="col">
                             <div class="page-content">
-                                <Headline title={page.frontmatter.sections_title_ar}/>
-                                {sectionslist}
+                                    <Headline title={page.frontmatter.sections_title_ar}/>
+                                    {sectionslist}
                             </div>
                         </div>
                     </div>
@@ -107,7 +106,7 @@ class About extends React.Component {
                                     header= {<h3>الرسالة</h3>}
                                     text= {<p>{page.frontmatter.mission_ar}</p>}
                                     />
-                                </div>
+                                </div>    
                             </div>
                         </div>
                     </div>
@@ -118,7 +117,7 @@ class About extends React.Component {
                                 <Headline title={page.frontmatter.features_title_ar}/>
                                 <div className="card-deck">
                                     {featureslist}
-                                </div>
+                                </div>    
                             </div>
                         </div>
                     </div>

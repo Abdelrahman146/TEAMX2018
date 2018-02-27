@@ -1,7 +1,7 @@
 import React from 'react'
 import Link from 'gatsby-link'
 import styled from "styled-components"
-
+import Fade from 'react-reveal/Fade';
 
 
 class Section extends React.Component {
@@ -52,24 +52,28 @@ class Section extends React.Component {
             <section>
                 
                 <div className="row">
-                    <div className={data.order%2 == 0 ? 'col-sm-5 align-middle' : 'col-sm-5 align-middle order-sm-2'}>
-                        <div className="section-image">
-                            {image}
+                    <Fade delay={1500} top duration={1000}>
+                        <div className={data.order%2 == 0 ? 'col-sm-5 align-middle' : 'col-sm-5 align-middle order-sm-2'}>
+                            <div className="section-image">
+                                {image}
+                            </div>
                         </div>
-                    </div>
-                    <div className={data.order%2 == 0 ? 'col-sm-7 align-middle' : 'col-sm-7 align-middle order-sm-1'}>
-                        <div className="card section-content">
-                                <div className="card-header">
-                                    <h2 className="text-center">{data.title}</h2>
-                                </div>
-                                <div className="card-body align-middle">
-                                    <p className="">
-                                        {data.description}
-                                    </p>
-                                </div>
-                                {button}
+                    </Fade>
+                    <Fade bottom delay={1750} duration={1000}>
+                        <div className={data.order%2 == 0 ? 'col-sm-7 align-middle' : 'col-sm-7 align-middle order-sm-1'}>
+                            <div className="card section-content">
+                                    <div className="card-header">
+                                        <h2 className="text-center">{data.title}</h2>
+                                    </div>
+                                    <div className="card-body align-middle">
+                                        <p className="">
+                                            {data.description}
+                                        </p>
+                                    </div>
+                                    {button}
+                            </div>
                         </div>
-                    </div>
+                    </Fade>
                 </div>
             </section>
         )

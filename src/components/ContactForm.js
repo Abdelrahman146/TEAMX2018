@@ -1,7 +1,7 @@
 import React from 'react'
 import Link from 'gatsby-link'
 import styled from "styled-components"
-
+import Fade from 'react-reveal/Fade';
 
 class ContactForm extends React.Component {
 
@@ -74,6 +74,7 @@ class ContactForm extends React.Component {
                 </div> 
         )
         return(
+            <Fade delay={1500}>
             <div className={"form form-primary-" + data.lang}>
                 <div className="panel panel-default validation-panel">
                     <RenderErrors errors={this.state.formErrors} />
@@ -107,6 +108,7 @@ class ContactForm extends React.Component {
                     disabled={!this.state.formValid}>{data.buttonText}</button>
                 </form>
             </div>
+            </Fade>
         )
     }
 }

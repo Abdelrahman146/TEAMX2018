@@ -1,8 +1,7 @@
 import React from 'react'
 import Link from 'gatsby-link'
 import styled from "styled-components"
-
-
+import Fade from 'react-reveal/Fade'
 
 class Headline extends React.Component {
     constructor(props) {
@@ -21,11 +20,13 @@ class Headline extends React.Component {
         const data = this.props
 
         return(
+            <Fade delay={1300}>
             <Container>
                 <h1 className="headline">
                     {data.title}
                 </h1>
             </Container>
+            </Fade>
         )
     }
 }

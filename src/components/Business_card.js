@@ -1,7 +1,7 @@
 import React from 'react'
 import Link from 'gatsby-link'
 import styled from "styled-components"
-
+import Fade from 'react-reveal/Fade';
 
 import Bc_header from './Bc_header'
 import Bc_body from './Bc_body'
@@ -22,6 +22,7 @@ class Business_card extends React.Component {
             <div  id="business-card">
                 <div className={"card business-card " + (layout.lang == 'ar' ? 'text-right':'')}>
                     
+                    <Fade delay={1300} duration={1000}>
                     <Bc_header 
                     img= {page.frontmatter.image.childImageSharp.resize.src}
                     name= {page.frontmatter.name}
@@ -34,13 +35,14 @@ class Business_card extends React.Component {
                     googleplus= {page.frontmatter.socialMedia.googleplus}
                     qrcode= {page.frontmatter.qr.childImageSharp.resize.src}
                     />
+                    
 
                     <div className="row">
                     <button className="btn btn-primary bc-btn" data-toggle="collapse" data-target="#info" aria-expanded="true" aria-controls="collapseOne">
                         {layout.lang == 'en' ? 'More' : 'المزيد'}
                     </button>
                     </div>
-
+                    </Fade>
                     <div id="info" className="collapse" aria-labelledby="headingOne" data-parent="#business-card">
                         <Bc_body
                         lang= {layout.lang}

@@ -13,6 +13,9 @@
         .langButton {
             box-shadow: none;
             color: $white;
+            padding: 5px 15px;
+            margin-top: 5px;
+            font-weight: 500;
         }
         .navbar-nav {
             padding-right: 0;
@@ -50,7 +53,7 @@
                 padding-right: 0;
                 background: linear-gradient(45deg, $purple, lighten($purple,6));
                 box-shadow: 0 0px 5px rgba(118, 82, 161, 0.65), 0 0px 15px rgba(204, 78, 156, 0.45);
-                //animation: fadein 1s;
+                animation: fadein 1s;
                 .langButton {
                     border-radius: 0;
                     padding: 8px 0px;

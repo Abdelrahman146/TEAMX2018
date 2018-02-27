@@ -1,7 +1,7 @@
 import React from 'react'
 import Link from 'gatsby-link'
 import styled from "styled-components"
-
+import Fade from 'react-reveal/Fade';
 
 
 class Card extends React.Component {
@@ -31,6 +31,7 @@ class Card extends React.Component {
             footer = ""
         }
         return(
+            <Fade bottom delay={1500}>
             <div className={"card card-" + data.color}>
                 {img}
                 <div className="text-center card-content">
@@ -43,6 +44,7 @@ class Card extends React.Component {
                     {footer}
                 </div>
             </div>
+            </Fade>
         )
     }
 }
