@@ -9,7 +9,7 @@ subtitle_en: "Experience The new Web Technologies"
 subtitle_ar: "عش تجربة تكنولوجياالويب الحديثة"
 description_en: ""
 description_ar: "العالم أصبح الأن قرية صغيرة لذا أتمتت الخدمات باتت من الأمور المهمة لمواكبة التحديات في العالم."
-summary_en: "Donec quis nisi arcu. Etiam auctor ipsum a volutpat vehicula. Cras mi nisi, facilisis eu aliquet sit amet, hendrerit eget leo. Aliquam euismod nisi quam, a commodo nulla dictum ac. Mauris tristique tristique ante, non porttitor ipsum pretium quis. Nunc nec turpis hendrerit, vulputate nulla in, elementum lectus. Nunc condimentum mauris consequat, vehicula risus quis, placerat augue. "
+summary_en: "We build your website with so much love, passion and creativity. Using JAMstack. A new source of building websites and apps that delivers a better quality performance, higher security, lower cost."
 summary_ar: "كما نعلم أن التسويق الرقمي من أحدث وسائل الترويج للمنتجات و للخدمات في شبكات التواصل الإجتماعي وفي الإنترنت.تيم إكس يقدم لكم حلول التسويق الرقمي ليتناسب مع متطلباتكمم و حاجاتكم التسويقية لكي نضمن لكم التقدم والنجاح."
 image: ./pic2.jpeg
 imageTransparent: false

@@ -22,7 +22,7 @@ class Footer extends React.Component {
                     <li><a href={data.gp}target="_blank"><span className="typcn typcn-social-google-plus-circular"></span></a></li>
                 </ul>
                 
-                <p className="copyright">{data.text}</p>
+                <p className="copyright" dangerouslySetInnerHTML={{ __html: data.text }}/>
             </div>
         )
     }

@@ -8,7 +8,7 @@ subtitle_en: "Duis a enim placerat, faucibus lectus mollis, consequat mi. Intege
 subtitle_ar: "هنالك العديد من الأنواع المتوفرة لنصوص لوريم إيبسوم، ولكن الغالبية تم تعديلها بشكل ما عبر إدخال بعض النوادر أو الكلمات العشوائية إلى النص"
 description_en: "Leave behind the traditional business techniques and beat your competitors with smartness and efficacy."
 description_ar: "ترك وراء تقنيات الأعمال التقليدية وفاز المنافسين الخاص بك مع الذكاء والفعالية."
-summary_en: "Donec quis nisi arcu. Etiam auctor ipsum a volutpat vehicula. Cras mi nisi, facilisis eu aliquet sit amet, hendrerit eget leo. Aliquam euismod nisi quam, a commodo nulla dictum ac. Mauris tristique tristique ante, non porttitor ipsum pretium quis. Nunc nec turpis hendrerit, vulputate nulla in, elementum lectus. Nunc condimentum mauris consequat, vehicula risus quis, placerat augue. "
+summary_en: "We use iOS and Android to deliver you with your dream application. "
 summary_ar: "كما نعلم أن التسويق الرقمي من أحدث وسائل الترويج للمنتجات و للخدمات في شبكات التواصل الإجتماعي وفي الإنترنت.تيم إكس يقدم لكم حلول التسويق الرقمي ليتناسب مع متطلباتكمم و حاجاتكم التسويقية لكي نضمن لكم التقدم والنجاح."
 image: ./pic2.jpg
 imageTransparent: false

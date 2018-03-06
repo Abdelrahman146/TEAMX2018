@@ -35,7 +35,7 @@ class Template extends React.Component {
         {text: 'Contact us', link: '/en/contact'},
         {text: 'Blog', link: '/en/blog'},
       ],
-      footer: "This Website is Designed and Developed By TEAMX - 2018",
+      footer: "This Website is made with <i class='typcn typcn-heart'></i> By Creative TEAMX - 2018",
       socialMedia: {
         twitter: 'https://twitter.com/TeamXItSolution',
         instagram: 'https://instagram.com/TeamXItSolution',

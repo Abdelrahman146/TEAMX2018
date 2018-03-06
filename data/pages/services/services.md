@@ -10,7 +10,7 @@ subtitle_en: "Superb IT Support Adopting Brand New Technologies. "
 subtitle_ar: "نوفر اسما خدمات الدعم الفني معتمدين على اجدد الابتكارات و الاختراعات."
 description_en: "Never Worry anymore, We Got You Always!"
 description_ar: "معنا لن تقلق ابداً، نحن خلفك دائما!"
-features_title_en: "We Understand You.. Thus, We Gurrantee"
+features_title_en: "We promise to guarantee you"
 features_title_ar: "نحن نتفهم متطلباتك.. لذلك، نحن نضمن لك"
 features:
     -   title_en: "Affordable Price"
