@@ -10,7 +10,7 @@ subtitle_ar: "عش تجربة تكنولوجياالويب الحديثة"
 description_en: ""
 description_ar: "العالم أصبح الأن قرية صغيرة لذا أتمتت الخدمات باتت من الأمور المهمة لمواكبة التحديات في العالم."
 summary_en: "We build your website with so much love, passion and creativity. Using JAMstack. A new source of building websites and apps that delivers a better quality performance, higher security, lower cost."
-summary_ar: "كما نعلم أن التسويق الرقمي من أحدث وسائل الترويج للمنتجات و للخدمات في شبكات التواصل الإجتماعي وفي الإنترنت.تيم إكس يقدم لكم حلول التسويق الرقمي ليتناسب مع متطلباتكمم و حاجاتكم التسويقية لكي نضمن لكم التقدم والنجاح."
+summary_ar: "نحن نبني المواقع بالكثير من الحب و الشغف و الابتكار. نستخدم تقنية JAMstack. تقنية جديدة لبناء المواقع والتطبيقات ذات جودة عالية و أداء متميز, ارتفاع الأمن و مخفض التكلفة."
 image: ./pic2.jpeg
 imageTransparent: false
 video: ./path/to/video

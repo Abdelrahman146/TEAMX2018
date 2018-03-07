@@ -11,7 +11,7 @@ subtitle_ar: "نوفر اسما خدمات الدعم الفني معتمدين 
 description_en: "Never Worry anymore, We Got You Always!"
 description_ar: "معنا لن تقلق ابداً، نحن خلفك دائما!"
 features_title_en: "We promise to guarantee you"
-features_title_ar: "نحن نتفهم متطلباتك.. لذلك، نحن نضمن لك"
+features_title_ar: "نحن نعدكم بأن نضمن لكم"
 features:
     -   title_en: "Affordable Price"
         title_ar: "سعر مقبول"
