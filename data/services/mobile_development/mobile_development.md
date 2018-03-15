@@ -2,14 +2,15 @@
 type: service
 wallpaper: ./wallpaper.jpg
 title_en: "Mobile Development"
-title_ar: "تطبيقات الموبايل"
+title_ar: "تطوير تطبيقات الهواتف الذكية"
 page_title_en: "Mobile Development"
 subtitle_en: "Duis a enim placerat, faucibus lectus mollis, consequat mi. Integer id aliquet nisi. "
 subtitle_ar: "هنالك العديد من الأنواع المتوفرة لنصوص لوريم إيبسوم، ولكن الغالبية تم تعديلها بشكل ما عبر إدخال بعض النوادر أو الكلمات العشوائية إلى النص"
 description_en: "Leave behind the traditional business techniques and beat your competitors with smartness and efficacy."
 description_ar: "ترك وراء تقنيات الأعمال التقليدية وفاز المنافسين الخاص بك مع الذكاء والفعالية."
-summary_en: "We use iOS and Android to deliver you with your dream application. "
-summary_ar: "نستخدم نظام التشغيل iOS & Android لنقدم لك التطبيق الذي لطالما حلمت به بطريقة عصرية و مميزة. "
+summary_en: "TeamX provides a customizable mobile apps that will portray your business
+requirements also we add a unique and fascinating feature that will make your apps looks amazing and secure."
+summary_ar: "نعمل جاهدين في تقديم أفضل الأساليب في تطوير تطبيقات الهواتف الذكية ونعمل في جعلها أكثر سهولة وأكثر أمانا.  "
 image: ./pic2.jpg
 imageTransparent: false
 video: ./path/to/video

@@ -9,8 +9,8 @@ subtitle_en: "We deliver all digital solutions to our customers"
 subtitle_ar: "نحن نوفر جميع الحلول الرقمية لعلائنا"
 description_en: "Digital marketing is the most important strategy to make your business popular"
 description_ar: "التسويق الرقمي يعتبر من اهم العناصر لنجاح المشاريع"
-summary_en: "Successful businesses can be recognized only through reaching out to people. By our Marketing Strategy, clients will be looking for you."
-summary_ar: "الأعمال الناجحة  لا يمكن أن يكون معروفا إلا من خلال الوصول إلى الناس. استراتيجية التسويق لدينا سوف تجعل العملاء يبحثون عنكم"
+summary_en: "As we know the digital marketing is the most important strategy to make your business popular, It helps your business prosper rapidly. TeamX provides this service to adopts certain strategies that capture market and help in booming your business."
+summary_ar: "كما نعلم أن التسويق الرقمي من أحدث وسائل الترويج للمنتجات وللخدمات في شبكات التواصل الإجتماعي وفي الإنترنت.تيم إكس يقدم لكم حلول التسويق الرقمي ليتناسب مع متطلباتكمم و حاجاتكم التسويقية لكي نضمن لكم التقدم والنجاح في أعمالكم."
 image: ./pic3.jpeg
 imageTransparent: false
 video: ./path/to/video
@@ -20,7 +20,7 @@ blurbs:
         image: pic4.jpeg
         imageTransparent: false
         description_en: "As we know the digital marketing is the most important strategy to make your business popular, It helps your business prosper rapidly. TeamX provides this service to adopts certain strategies that capture market and help in booming your business."
-        description_ar: "كما نعلم أن التسويق الرقمي من أحدث وسائل الترويج للمنتجات و للخدمات في شبكات التواصل الإجتماعي وفي الإنترنت.تيم إكس يقدم لكم حلول التسويق الرقمي ليتناسب مع متطلباتكمم و حاجاتكم التسويقية لكي نضمن لكم التقدم والنجاح."
+        description_ar: "كما نعلم أن التسويق الرقمي من أحدث وسائل الترويج للمنتجات وللخدمات في شبكات التواصل الإجتماعي وفي الإنترنت.تيم إكس يقدم لكم حلول التسويق الرقمي ليتناسب مع متطلباتكمم و حاجاتكم التسويقية لكي نضمن لكم التقدم والنجاح في أعمالكم."
     -   title_en: "We understand your needs"
         title_ar: "نحن نتفهم إحتياجاتكم"
         image: ./pic2.jpeg

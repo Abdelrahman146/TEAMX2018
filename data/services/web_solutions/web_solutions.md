@@ -9,8 +9,8 @@ subtitle_en: "Experience The new Web Technologies"
 subtitle_ar: "عش تجربة تكنولوجياالويب الحديثة"
 description_en: ""
 description_ar: "العالم أصبح الأن قرية صغيرة لذا أتمتت الخدمات باتت من الأمور المهمة لمواكبة التحديات في العالم."
-summary_en: "We build your website with so much love, passion and creativity. Using JAMstack. A new source of building websites and apps that delivers a better quality performance, higher security, lower cost."
-summary_ar: "نحن نبني المواقع بالكثير من الحب و الشغف و الابتكار. نستخدم تقنية JAMstack. تقنية جديدة لبناء المواقع والتطبيقات ذات جودة عالية و أداء متميز, ارتفاع الأمن و مخفض التكلفة."
+summary_en: "We build your website with love, passion and innovation. Using the latest technology with new source of building websites and apps that delivers a better quality performance, higher security, lower cost."
+summary_ar: "نحن نعمل في تطوير المواقع الإلكترونية بالحب والشغف والابتكار. نستخدم تقنيات و حلول  جديدة لبناء المواقع والتطبيقات ذات جودة عالية و أداء متميز, وذات أمن إلكتروني عالي و منخفض التكلفة."
 image: ./pic2.jpeg
 imageTransparent: false
 video: ./path/to/video
