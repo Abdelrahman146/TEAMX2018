@@ -51,3 +51,9 @@
         max-width: $max-width;
     }
 }
+
+@include media-breakpoint-down(sm) {
+    .page {
+        border-radius: 10px;
+    }
+  }
