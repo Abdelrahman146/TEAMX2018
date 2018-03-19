@@ -4,6 +4,9 @@ import emergence from 'emergence.js'
 import Helmet from 'react-helmet'
 import styled from "styled-components";
 
+// import 'font-awesome/css/font-awesome.min.css';
+// import 'bootstrap/dist/css/bootstrap.min.css';
+// import 'mdbreact/dist/css/mdb.css';
 
 // images
 import logo from "../images/logo.png";

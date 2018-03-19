@@ -1,25 +1,37 @@
 import React from 'react'
 import Link from 'gatsby-link'
+//import { Navbar, NavbarBrand, NavbarNav, NavbarToggler, Collapse, NavItem, NavLink, Dropdown, DropdownToggle, DropdownMenu, DropdownItem } from 'mdbreact';
 
 
 class PHeader extends React.Component {
     constructor(props) {
-        super(props)
-    }
+        super(props);
+        this.state ={
+          collapse: false,
+          isWideEnough: false
+        };
+        this.onClick = this.onClick.bind(this);
+      }
+    
+      onClick(){
+        this.setState({
+          collapse: !this.state.collapse,
+        });
+      }
 
     render() {
 
         const data = this.props
         const list = data.menu.map((item) =>
-                <li className="nav-item">
-                    <Link className="nav-link" activeClassName="active" to={item.link}>{item.text}</Link>
-                </li>
+            <li className="nav-item">
+                <Link className="nav-link" activeClassName="active" to={item.link}>{item.text}</Link>
+            </li>
         );
-                
-        
-        return(
+
+
+        return (
             <div className="header">
-            <nav className="navbar navbar-expand-md navbar-dark">
+                <nav className="navbar navbar-expand-md navbar-dark">
                     <Link className="navbar-brand" to={data.language == "العربية" ? "/en/" : "/ar/"}>
                         <img src={data.logo} alt="teamx logo"/>
                     </Link>
@@ -45,7 +57,7 @@ class PHeader extends React.Component {
                         </span>
                     </div>
             </nav>
-        </div>
+            </div>
         )
     }
 }
