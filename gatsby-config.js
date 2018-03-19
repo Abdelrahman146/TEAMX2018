@@ -111,15 +111,6 @@ module.exports = {
         ]
       }
     },
-<<<<<<< HEAD
-    {
-      resolve: 'gatsby-plugin-google-analytics',
-      options: {
-        trackingId: '',
-      },
-    },
-=======
->>>>>>> migrated TEAMX2018 to this folder
     'gatsby-plugin-catch-links',
     'gatsby-plugin-netlify',
     'gatsby-plugin-offline',

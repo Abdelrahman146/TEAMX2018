@@ -1,8 +1,8 @@
 {
-  "name": "gatsby-starter-bootstrap",
-  "description": "Simple starter for Gatsby",
-  "version": "1.9.119",
-  "author": "Futoshi Iwashita <jaxx2104@gmail.com>",
+  "name": "TEAMX IT Solutions",
+  "description": "TEAMX Website 2018 built by gatsby",
+  "version": "1.0",
+  "author": "Abdelrahman Harahsheh  <abdel@teamx.ae>",
   "dependencies": {
     "gatsby": "^1.9.199",
     "gatsby-link": "^1.6.31",
