@@ -1,5 +1,5 @@
 {
-  "name": "TEAMX IT Solutions",
+  "name": "TEAMX-IT-Solutions",
   "description": "TEAMX Website 2018 built by gatsby",
   "version": "1.0",
   "author": "Abdelrahman Harahsheh  <abdel@teamx.ae>",
@@ -105,5 +105,6 @@
     "lint:textfix": "textlint --fix src/pages/**/index.md",
     "precommit": "lint-staged",
     "test": "echo \"Error: no test specified\" && exit 1"
-  }
+  },
+  "mdbreact": "git+https://github.com/mdbootstrap/React-Bootstrap-with-Material-Design.git"
 }
