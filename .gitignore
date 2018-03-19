@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 node_modules/
 public
 .gatsby-context.js
@@ -7,13 +6,3 @@ public
 .cache/
 .vscode/
 yarn.lock
-=======
-# Project dependencies
-# https://www.npmjs.org/doc/misc/npm-faq.html#should-i-check-my-node_modules-folder-into-git
-.cache
-node_modules
-yarn-error.log
-
-# Build directory
-/public
->>>>>>> migrated TEAMX2018 to this folder
