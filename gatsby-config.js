@@ -1,7 +1,7 @@
 module.exports = {
   siteMetadata: {
     title_en: 'TEAMX IT Solutions',
-    title_ar:'تيم اكس لحلول تكنولوجيا المعلومات',
+    title_ar: 'تيم اكس لحلول تكنولوجيا المعلومات',
     description: 'This is teamx website developed by gatsby',
     siteUrl: 'http://www.teamx.ae',
     author: 'Abdel Rahman Harahsheh',
@@ -13,7 +13,7 @@ module.exports = {
     {
       resolve: `gatsby-plugin-favicon`,
       options: {
-        logo: "./src/icon_32x32.png",
+        logo: './src/icon_32x32.png',
         injectHTML: true,
         icons: {
           android: false,
@@ -24,9 +24,9 @@ module.exports = {
           firefox: true,
           twitter: false,
           yandex: false,
-          windows: false
-        }
-      }
+          windows: false,
+        },
+      },
     },
     {
       resolve: 'gatsby-source-filesystem',
@@ -42,7 +42,7 @@ module.exports = {
         path: `${__dirname}/src/images`,
       },
     },
-      {
+    {
       resolve: 'gatsby-transformer-remark',
       options: {
         plugins: [
@@ -55,11 +55,11 @@ module.exports = {
             },
           },
           {
-            resolve: "gatsby-remark-external-links",
+            resolve: 'gatsby-remark-external-links',
             options: {
-              target: "_blank",
-              rel: "nofollow"
-            }
+              target: '_blank',
+              rel: 'nofollow',
+            },
           },
           {
             resolve: 'gatsby-remark-responsive-iframe',
@@ -107,9 +107,9 @@ module.exports = {
         fonts: [
           `Quicksand`,
           `Mada`,
-          `source sans pro` // you can also specify font weights and styles
-        ]
-      }
+          `source sans pro`, // you can also specify font weights and styles
+        ],
+      },
     },
     'gatsby-plugin-catch-links',
     'gatsby-plugin-netlify',
@@ -122,11 +122,11 @@ module.exports = {
     'gatsby-plugin-styled-components',
     {
       resolve: 'gatsby-plugin-i18n',
-      options: {        
+      options: {
         langKeyDefault: 'en',
         useLangKeyLayout: true,
         langKeyForNull: 'en',
-      }
+      },
     },
     {
       resolve: `gatsby-plugin-nprogress`,
